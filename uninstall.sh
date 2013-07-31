@@ -8,6 +8,7 @@ filesdir=$(pwd)
 cd $HOME/.dotfiles.backup/
 backupdir="$HOME/.dotfiles.backup/$(ls -1d */ | tail -1)"
 
+cd $HOME/dotfiles/files/
 for dotfile in $(ls -1A); do
 	rm "$HOME/$dotfile" 2>/dev/null
 done
