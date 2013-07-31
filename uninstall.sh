@@ -12,7 +12,7 @@ for dotfile in $(ls -1A); do
 	rm "$HOME/$dotfile" 2>/dev/null
 done
 
-echo $backupdir
+cd $backupdir
 
 for dotfile in $(ls -1A); do
 	cp "$dotfile" "$HOME/$dotfile"
