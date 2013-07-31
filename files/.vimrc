@@ -1,10 +1,10 @@
-"gvimrc symlinks here, so do gvim stuff here too
 if has("gui_running")
+	".gvimrc symlinks here
 	hi Normal guifg=Black guibg=#E6E6E6
 	hi Visual guifg=Black guibg=#9EC7F0
 	set lines=50 columns=160
 else
-	"do gui stuff for normal vim in here light background/colour schemes
+	"do gui stuff for normal vim in here
 	colorscheme peachpuff
 endif
 
