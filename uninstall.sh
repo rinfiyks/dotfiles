@@ -14,7 +14,6 @@ for dotfile in $(ls -1A); do
 done
 
 cd $backupdir
-
 for dotfile in $(ls -1A); do
 	cp "$dotfile" "$HOME/$dotfile"
 done
