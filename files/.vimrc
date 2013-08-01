@@ -44,5 +44,6 @@ nnoremap <CR> :noh<CR><CR>
 
 "copy/paste from X clipboard
 map <Leader>y "+y
+map <Leader>Y "+Y
 map <Leader>p "+p
 map <Leader>P "+P
