@@ -42,6 +42,8 @@ map OD <Left>
 "better solution than esc to :noh (which behaved weirdly sometimes)
 nnoremap <CR> :noh<CR><CR>
 
+map Q <Nop>
+
 "copy/paste from X clipboard
 map <Leader>y "+y
 map <Leader>Y "+Y
