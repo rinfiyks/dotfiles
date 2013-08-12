@@ -9,10 +9,12 @@ else
 endif
 
 syntax on
+if has('mouse')
+	set mouse=a
+endif
 
 set noswapfile
 set nocompatible
-set encoding=utf-8
 
 set tabstop=4
 set shiftwidth=4
@@ -27,8 +29,7 @@ set smartcase
 set ruler
 set number
 "if :wrap then don't break words
-set lbr
-set mouse=a
+set linebreak
 set shell=/bin/bash\ -i
 
 set backspace=2
