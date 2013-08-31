@@ -21,6 +21,10 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+set list
+"compile vim with +multi_byte for these chars to display correctly
+set listchars=tab:▸\ ,eol:¬
+
 set showcmd
 set hlsearch
 set incsearch
