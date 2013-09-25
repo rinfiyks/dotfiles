@@ -23,7 +23,7 @@ set autoindent
 
 set list
 "compile vim with +multi_byte for these chars to display correctly
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:·
 
 set showcmd
 set hlsearch
@@ -55,3 +55,14 @@ map <Leader>y "+y
 map <Leader>Y "+Y
 map <Leader>p "+p
 map <Leader>P "+P
+
+
+filetype off "required for vundle
+set rtp+=~/.vim/bundle/vundle 
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
+filetype plugin indent on "required for vundle

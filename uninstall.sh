@@ -10,10 +10,12 @@ backupdir="$HOME/.dotfiles.backup/$(ls -1d */ | tail -1)"
 
 cd $HOME/dotfiles/files/
 for dotfile in $(ls -1A); do
-	rm "$HOME/$dotfile" 2>/dev/null
+    rm -r "$HOME/$dotfile" 2>/dev/null
+    echo "Removed $dotfile"
 done
 
 cd $backupdir
 for dotfile in $(ls -1A); do
-	cp "$dotfile" "$HOME/$dotfile"
+    cp -r "$dotfile" "$HOME/$dotfile"
+    echo "Restored original $dotfile"
 done
