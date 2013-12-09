@@ -19,6 +19,11 @@ done
 
 echo "Installing vundle for vim"
 cd ".vim/bundle"
-git clone https://github.com/gmarik/vundle.git
+if [ -d vundle ]; then
+    cd vundle
+    git pull
+else
+    git clone https://github.com/gmarik/vundle.git
+fi
 vim +BundleInstall +qall
 echo "All done"
