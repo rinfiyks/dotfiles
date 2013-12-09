@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # change dir to files location in repo, in case script was called from somewhere else
-cd "$(dirname "$0")"/files
-filesdir=$(pwd)
+cd "$(dirname "$0")"
+filesdir=$(pwd)/files
 
-# get the 'latest' directory in the backup dir
-cd $HOME/.dotfiles.backup/
-backupdir="$HOME/.dotfiles.backup/$(ls -1d */ | tail -1)"
+# get the 'oldest' directory in the backup dir
+cd dotfiles.backup
+backupdir="$(pwd)/$(ls -1d */ | head -1)"
+echo "Using backupdir: $backupdir"
 
 cd $HOME/dotfiles/files/
 for dotfile in $(ls -1A); do

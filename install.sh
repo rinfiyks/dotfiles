@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # change dir to files location in repo, in case script was called from somewhere else
-cd "$(dirname "$0")"/files
-filesdir=$(pwd)
+cd "$(dirname "$0")"
+filesdir=$(pwd)/files
 
-backupdir="$HOME/.dotfiles.backup/$(date "+%Y%m%d%H%M%S")"
+backupdir="$(pwd)/dotfiles.backup/$(date "+%Y%m%d%H%M%S")"
 echo "Making backup dir: $backupdir"
-mkdir -p $backupdir
+mkdir -p "$backupdir"
 
+cd "$filesdir"
 for dotfile in $(ls -1A); do
     mv "$HOME/$dotfile" "$backupdir/$dotfile" 2>/dev/null
     if [ $? == 0 ]; then
