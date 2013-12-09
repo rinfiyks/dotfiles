@@ -21,6 +21,7 @@ done
 echo "Installing vundle for vim"
 cd ".vim/bundle"
 if [ -d vundle ]; then
+    echo "vundle is already cloned, will pull instead"
     cd vundle
     git pull
 else
