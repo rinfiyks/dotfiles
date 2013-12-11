@@ -65,4 +65,5 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
+Bundle 'FredKSchott/CoVim'
 filetype plugin indent on "required for vundle
