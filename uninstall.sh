@@ -11,12 +11,12 @@ echo "Using backupdir: $backupdir"
 
 cd $HOME/dotfiles/files/
 for dotfile in $(ls -1A); do
-    rm -r "$HOME/$dotfile" 2>/dev/null
-    echo "Removed $dotfile"
+	rm -r "$HOME/$dotfile" 2>/dev/null
+	echo "Removed $dotfile"
 done
 
 cd $backupdir
 for dotfile in $(ls -1A); do
-    cp -r "$dotfile" "$HOME/$dotfile"
-    echo "Restored original $dotfile"
+	cp -r "$dotfile" "$HOME/$dotfile"
+	echo "Restored original $dotfile"
 done

@@ -10,22 +10,22 @@ mkdir -p "$backupdir"
 
 cd "$filesdir"
 for dotfile in $(ls -1A); do
-    mv "$HOME/$dotfile" "$backupdir/$dotfile" 2>/dev/null
-    if [ $? == 0 ]; then
-        echo "Backed up previous copy of $dotfile"
-    fi
-    ln -s "$filesdir/$dotfile" "$HOME/$dotfile"
-    echo "Added $dotfile"
+	mv "$HOME/$dotfile" "$backupdir/$dotfile" 2>/dev/null
+	if [ $? == 0 ]; then
+		echo "Backed up previous copy of $dotfile"
+	fi
+	ln -s "$filesdir/$dotfile" "$HOME/$dotfile"
+	echo "Added $dotfile"
 done
 
 echo "Installing vundle for vim"
 cd ".vim/bundle"
 if [ -d vundle ]; then
-    echo "vundle is already cloned, will pull instead"
-    cd vundle
-    git pull
+	echo "vundle is already cloned, will pull instead"
+	cd vundle
+	git pull
 else
-    git clone https://github.com/gmarik/vundle.git
+	git clone https://github.com/gmarik/vundle.git
 fi
 vim +BundleInstall +qall
 echo "All done"
