@@ -18,8 +18,8 @@ set nocompatible
 
 set tabstop=4
 set shiftwidth=4
-set expandtab
 set autoindent
+autocmd FileType python setlocal expandtab
 
 set list
 "compile vim with +multi_byte for these chars to display correctly
