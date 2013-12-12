@@ -61,9 +61,10 @@ filetype off "required for vundle
 set rtp+=~/.vim/bundle/vundle 
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fireplace'
+Bundle 'FredKSchott/CoVim'
+Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
-Bundle 'FredKSchott/CoVim'
+Bundle 'tpope/vim-fireplace'
+Bundle 'gmarik/vundle'
 filetype plugin indent on "required for vundle
