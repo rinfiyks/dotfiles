@@ -46,6 +46,7 @@ set hidden
 map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 map <Leader>c :bp\|bd #<CR>
+let g:NERDTreeWinPos = "right"
 
 "arrow keys for movement (just in case)
 map OA <Up>
