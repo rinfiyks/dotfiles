@@ -5,8 +5,11 @@ if has("gui_running")
 	set lines=50 columns=160
 else
 	"do gui stuff for normal vim in here
-	colorscheme peachpuff
 endif
+
+set t_Co=256
+colorscheme peachpuff
+let g:airline_theme="sol"
 
 syntax on
 if has('mouse')
@@ -47,6 +50,7 @@ map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 map <Leader>c :bp\|bd #<CR>
 let g:NERDTreeWinPos = "right"
+let g:airline#extensions#tabline#enabled = 1
 
 "arrow keys for movement (just in case)
 map OA <Up>
@@ -70,8 +74,9 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'FredKSchott/CoVim'
-Bundle 'fholgado/minibufexpl.vim'
+"Bundle 'fholgado/minibufexpl.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fireplace'
