@@ -39,6 +39,11 @@ set shell=/bin/bash\ -i
 
 set backspace=2
 
+"lets you hide an unwritten buffer
+set hidden
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
+
 "arrow keys for movement (just in case)
 map OA <Up>
 map OB <Down>
@@ -62,6 +67,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'FredKSchott/CoVim'
+Bundle 'fholgado/minibufexpl.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
