@@ -13,6 +13,8 @@ if has('mouse')
 	set mouse=a
 endif
 
+let mapleader=" "
+
 set noswapfile
 set nocompatible
 
@@ -43,6 +45,7 @@ set backspace=2
 set hidden
 map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
+map <Leader>c :bp\|bd #<CR>
 
 "arrow keys for movement (just in case)
 map OA <Up>
@@ -50,8 +53,7 @@ map OB <Down>
 map OC <Right>
 map OD <Left>
 
-"better solution than esc to :noh (which behaved weirdly sometimes)
-nnoremap <Space> :noh<CR>
+nnoremap \ :noh<CR>
 
 map Q gqi{
 
