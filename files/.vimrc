@@ -1,5 +1,4 @@
 if has("gui_running")
-	".gvimrc symlinks here
 	hi Normal guifg=Black guibg=#E6E6E6
 	hi Visual guifg=Black guibg=#9EC7F0
 	set lines=50 columns=160
@@ -74,7 +73,6 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'FredKSchott/CoVim'
-"Bundle 'fholgado/minibufexpl.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-classpath'
