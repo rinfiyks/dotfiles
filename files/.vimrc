@@ -78,6 +78,8 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fireplace'
-Bundle 'Valloric/YouCompleteMe'
+if (version == 703 && has("patch 538")) || version >= 704
+	Bundle 'Valloric/YouCompleteMe'
+endif
 Bundle 'gmarik/vundle'
 filetype plugin indent on "required for vundle
