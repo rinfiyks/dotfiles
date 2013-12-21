@@ -4,7 +4,7 @@
 cd "$(dirname "$0")"
 filesdir=$(pwd)/files
 
-backupdir="$(pwd)/dotfiles.backup/$(date "+%Y%m%d%H%M%S")"
+backupdir="$(pwd)/backup/$(date "+%Y%m%d%H%M%S")"
 echo "Making backup dir: $backupdir"
 mkdir -p "$backupdir"
 

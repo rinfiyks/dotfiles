@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 filesdir=$(pwd)/files
 
 # get the 'oldest' directory in the backup dir
-cd dotfiles.backup
+cd backup
 backupdir="$(pwd)/$(ls -1d */ | head -1)"
 echo "Using backupdir: $backupdir"
 
