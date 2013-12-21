@@ -28,10 +28,16 @@ if [ -d vundle ]; then
 else
 	git clone https://github.com/gmarik/vundle.git
 fi
+
+[ -d YouCompleteMe ]
+installYCM=$?
+
 vim +BundleInstall +qall
 
-echo "Installing YouCompleteMe"
-cd "YouCompleteMe"
-./install.sh --clang-completer
+if [ $installYCM == 1 ]; then
+	echo "Installing YouCompleteMe"
+	cd "YouCompleteMe"
+	./install.sh --clang-completer
+fi
 
 echo "All done"
