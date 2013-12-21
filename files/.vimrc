@@ -78,5 +78,6 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fireplace'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'gmarik/vundle'
 filetype plugin indent on "required for vundle

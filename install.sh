@@ -24,8 +24,14 @@ if [ -d vundle ]; then
 	echo "vundle is already cloned, will pull instead"
 	cd vundle
 	git pull
+	cd ..
 else
 	git clone https://github.com/gmarik/vundle.git
 fi
 vim +BundleInstall +qall
+
+echo "Installing YouCompleteMe"
+cd "YouCompleteMe"
+./install.sh --clang-completer
+
 echo "All done"
