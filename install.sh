@@ -34,10 +34,12 @@ installYCM=$?
 
 vim +BundleInstall +qall
 
-if [ $installYCM == 1 ]; then
+if [ $installYCM == 1 ] && [ -d YouCompleteMe ]; then
 	echo "Installing YouCompleteMe"
 	cd "YouCompleteMe"
 	./install.sh --clang-completer
+elif [ ! -d YouCompleteMe ]; then
+	echo "Version of vim is too low to support YouCompleteMe"
 fi
 
 echo "All done"
