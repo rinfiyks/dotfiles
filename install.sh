@@ -2,7 +2,7 @@
 
 # change dir to files location in repo, in case script was called from somewhere else
 cd "$(dirname "$0")"
-filesdir=$(pwd)/files
+filesdir="$(pwd)/files"
 
 backupdir="$(pwd)/backup/$(date "+%Y%m%d%H%M%S")"
 echo "Making backup dir: $backupdir"
