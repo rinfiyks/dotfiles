@@ -60,7 +60,9 @@ if [ -x /usr/bin/dircolors ]; then
 	alias egrep='egrep --color=auto'
 fi
 
-source /usr/share/doc/pkgfile/command-not-found.bash 2> /dev/null
+if [ -f /usr/share/doc/pkgfile/command-not-found.bash ]; then
+	. /usr/share/doc/pkgfile/command-not-found.bash
+fi
 
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
