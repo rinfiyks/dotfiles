@@ -12,7 +12,9 @@ let g:airline_theme="sol"
 
 syntax on
 if has('mouse')
-	set mouse=a
+	"stop mouse dragging triggering visual mode
+	"you can still select stuff by shift dragging
+	set mouse=nicr
 endif
 
 let mapleader=" "
