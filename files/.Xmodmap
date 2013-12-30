@@ -2,3 +2,5 @@ remove Lock = Caps_Lock
 keysym Escape = Caps_Lock
 keysym Caps_Lock = Escape
 add Lock = Caps_Lock
+clear mod5
+keycode 108 = Alt_R
