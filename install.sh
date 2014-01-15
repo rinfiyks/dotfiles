@@ -1,5 +1,8 @@
 #!/bin/bash
 
+. ~/.bashrc
+shopt -s expand_aliases
+
 # change dir to files location in repo, in case script was called from somewhere else
 cd "$(dirname "$0")"
 filesdir="$(pwd)/files"
@@ -32,7 +35,7 @@ fi
 [ -d YouCompleteMe ]
 installYCM=$?
 
-vim +BundleInstall +qall
+vi +BundleInstall +qall
 
 if [ ! -d YouCompleteMe ]; then
 	echo "Version of vim is too low to support YouCompleteMe"
