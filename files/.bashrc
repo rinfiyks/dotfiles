@@ -3,7 +3,7 @@
 # for examples
 
 # If not running interactively, don't do anything
-#[[ $- != *i* ]] && return
+[[ $- != *i* ]] && return
 
 HISTCONTROL=ignoreboth
 shopt -s histappend
