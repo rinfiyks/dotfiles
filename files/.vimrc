@@ -74,7 +74,6 @@ filetype off "required for vundle
 set rtp+=~/.vim/bundle/vundle 
 call vundle#rc()
 
-Bundle 'FredKSchott/CoVim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-classpath'
