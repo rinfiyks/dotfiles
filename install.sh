@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -f ~/.bashrc_local ]; then
-	. ~/.bashrc_local
+if [ -f ~/.bash_aliases_local ]; then
+	. ~/.bash_aliases_local
 	shopt -s expand_aliases
 fi
 
