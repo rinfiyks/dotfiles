@@ -68,8 +68,8 @@ if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 
-if [ -f ~/.local_aliases ]; then
-	. ~/.local_aliases
+if [ -f ~/.bashrc_local ]; then
+	. ~/.bashrc_local
 fi
 
 if ! shopt -oq posix; then
