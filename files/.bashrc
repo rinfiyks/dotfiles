@@ -3,7 +3,7 @@
 # for examples
 
 # If not running interactively, don't do anything
-#[[ $- != *i* ]] && return
+[[ $- != *i* ]] && return
 
 HISTCONTROL=ignoreboth
 shopt -s histappend
@@ -68,8 +68,12 @@ if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 
-if [ -f ~/.local_aliases ]; then
-	. ~/.local_aliases
+if [ -f ~/.bash_aliases_local ]; then
+	. ~/.bash_aliases_local
+fi
+
+if [ -f ~/.bashrc_local ]; then
+	. ~/.bashrc_local
 fi
 
 if ! shopt -oq posix; then

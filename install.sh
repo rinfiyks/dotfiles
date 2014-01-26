@@ -1,7 +1,9 @@
 #!/bin/bash
 
-. ~/.bashrc
-shopt -s expand_aliases
+if [ -f ~/.bash_aliases_local ]; then
+	. ~/.bash_aliases_local
+	shopt -s expand_aliases
+fi
 
 # change dir to files location in repo, in case script was called from somewhere else
 cd "$(dirname "$0")"
