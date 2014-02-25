@@ -1,4 +1,4 @@
-URxvt*iconFile: /usr/share/icons/gnome/32x32/apps/utilities-terminal.png
+URxvt*iconFile: .urxvt/utilities-terminal.png
 URxvt*internalBorder: 1
 URxvt*iso14755: false
 URxvt*saveLines: 1000000
