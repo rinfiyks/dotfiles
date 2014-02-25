@@ -1,0 +1,38 @@
+URxvt*iconFile: /usr/share/icons/gnome/32x32/apps/utilities-terminal.png
+URxvt*internalBorder: 1
+URxvt*iso14755: false
+URxvt*saveLines: 1000000
+URxvt*scrollBar: false
+URxvt*scrollstyle: rxvt
+URxvt*termName: rxvt
+URxvt*transparent: false
+URxvt*urgentOnBell: true
+URxvt*visualBell: false
+
+URxvt.perl-lib: ${HOME}/.urxvt/ext/perls
+URxvt.perl-ext-common: clipboard,default,matcher,-option-popup,-searchable-scrollback,-selection-popup
+
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
+URxvt*font: xft:Liberation Mono:pixelsize=13:antialias=true:hinting=true
+URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=13:antialias=true:hinting=true
+
+URxvt*foreground: #202426
+URxvt*background: #C2C0C2
+URxvt*color0:     #202426
+URxvt*color1:     #B80000
+URxvt*color2:     #046624
+URxvt*color3:     #804400
+URxvt*color4:     #193B6B
+URxvt*color5:     #5C3F61
+URxvt*color6:     #036466
+URxvt*color7:     #D7D4D7
+URxvt*color8:     #555753
+URxvt*color9:     #E62727
+URxvt*color10:    #23994A
+URxvt*color11:    #D77200
+URxvt*color12:    #547599
+URxvt*color13:    #946D90
+URxvt*color14:    #059799
+URxvt*color15:    #EBE8EB
