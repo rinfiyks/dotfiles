@@ -9,7 +9,6 @@ URxvt*transparent: false
 URxvt*urgentOnBell: true
 URxvt*visualBell: false
 
-URxvt.perl-lib: ${HOME}/.urxvt/ext/perls
 URxvt.perl-ext-common: clipboard,default,matcher,-option-popup,-searchable-scrollback,-selection-popup
 
 URxvt.keysym.M-c: perl:clipboard:copy
