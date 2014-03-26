@@ -48,6 +48,9 @@ set smartcase
 
 set ruler
 set number
+if version >= 704
+	set relativenumber
+endif
 "if :wrap then don't break words
 set linebreak
 set shell=/bin/bash\ -i
