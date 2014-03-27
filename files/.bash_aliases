@@ -2,7 +2,7 @@ alias apt5='sudo apt-get check && sudo apt-get update && sudo apt-get dist-upgra
 
 alias bleep='paplay /usr/share/sounds/freedesktop/stereo/complete.oga'
 
-alias jc='$HOME/j64-701/bin/jconsole | sed "'"s/^   //"'"'
+alias jj='$HOME/j64-701/bin/jconsole | sed "'"s/^   //"'"'
 
 alias l='ls -CF'
 alias la='ls -A'
