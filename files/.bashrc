@@ -76,6 +76,10 @@ if [ -f ~/.bashrc_local ]; then
 	. ~/.bashrc_local
 fi
 
+if [ -f /etc/profile.d/autojump.bash ]; then
+	. /etc/profile.d/autojump.bash
+fi
+
 if ! shopt -oq posix; then
 	if [ -f /etc/bash_completion ]; then
 		. /etc/bash_completion
