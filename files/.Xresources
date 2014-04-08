@@ -17,21 +17,21 @@ URxvt.keysym.M-v: perl:clipboard:paste
 URxvt*font: xft:Liberation Mono:pixelsize=13:antialias=true:hinting=true
 URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=13:antialias=true:hinting=true
 
-URxvt*foreground: #202426
-URxvt*background: #C2C0C2
-URxvt*color0:     #202426
-URxvt*color1:     #B80000
-URxvt*color2:     #046624
-URxvt*color3:     #804400
-URxvt*color4:     #193B6B
-URxvt*color5:     #5C3F61
-URxvt*color6:     #036466
-URxvt*color7:     #D7D4D7
-URxvt*color8:     #555753
-URxvt*color9:     #E62727
-URxvt*color10:    #23994A
-URxvt*color11:    #D77200
-URxvt*color12:    #547599
-URxvt*color13:    #946D90
-URxvt*color14:    #059799
-URxvt*color15:    #EBE8EB
+URxvt*background: #1c1c1c
+URxvt*foreground: #c6c6c6
+URxvt*color0:     #000000
+URxvt*color1:     #bf7276
+URxvt*color2:     #86af80
+URxvt*color3:     #968a38
+URxvt*color4:     #3673b5
+URxvt*color5:     #9a70b2
+URxvt*color6:     #7abecc
+URxvt*color7:     #dbdbdb
+URxvt*color8:     #6692af
+URxvt*color9:     #e5505f
+URxvt*color10:    #87bc87
+URxvt*color11:    #e0d95c
+URxvt*color12:    #1b85d6
+URxvt*color13:    #ad73ba
+URxvt*color14:    #338eaa
+URxvt*color15:    #f4f4f4
