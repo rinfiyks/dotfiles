@@ -17,7 +17,7 @@ URxvt.keysym.M-v: perl:clipboard:paste
 URxvt*font: xft:Liberation Mono:pixelsize=13:antialias=true:hinting=true
 URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=13:antialias=true:hinting=true
 
-URxvt*background: #1c1c1c
+URxvt*background: #242424
 URxvt*foreground: #c6c6c6
 URxvt*color0:     #000000
 URxvt*color1:     #bf7276
