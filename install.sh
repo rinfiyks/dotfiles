@@ -34,17 +34,6 @@ else
 	git clone https://github.com/gmarik/vundle.git
 fi
 
-[ -d YouCompleteMe ]
-installYCM=$?
-
 vi +BundleInstall +qall
-
-if [ ! -d YouCompleteMe ]; then
-	echo "Version of vim is too low to support YouCompleteMe"
-elif [ $installYCM == 1 ]; then
-	echo "Installing YouCompleteMe"
-	cd "YouCompleteMe"
-	./install.sh --clang-completer
-fi
 
 echo "All done"

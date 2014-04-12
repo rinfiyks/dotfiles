@@ -9,15 +9,13 @@ endif
 set t_Co=256
 colorscheme peachpuff
 
-let g:airline_theme="sol"
+let g:airline_theme="wombat"
 
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
+let g:syntastic_ignore_files = ['\.py$']
 
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
-
-let g:syntastic_python_checkers=['pylint']
+let g:pymode_python='python'
 
 syntax on
 if has('mouse')
@@ -87,13 +85,12 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'scrooloose/nerdtree'
+Bundle 'klen/python-mode'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fireplace'
-if (version == 703 && has("patch 538")) || version >= 704
-	Bundle 'Valloric/YouCompleteMe'
-endif
 Bundle 'gmarik/vundle'
+
 filetype plugin indent on "required for vundle
