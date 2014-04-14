@@ -14,8 +14,8 @@ URxvt.perl-ext-common: clipboard,default,matcher,-option-popup,-searchable-scrol
 URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
 
-URxvt*font: xft:Liberation Mono:pixelsize=13:antialias=true:hinting=true
-URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=13:antialias=true:hinting=true
+URxvt*font: xft:Literation Mono Powerline:pixelsize=13:antialias=true:hinting=true
+URxvt*boldFont: xft:Literation Mono Powerline:bold:pixelsize=13:antialias=true:hinting=true
 
 URxvt*background: #242424
 URxvt*foreground: #c6c6c6

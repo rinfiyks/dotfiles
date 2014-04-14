@@ -10,6 +10,7 @@ set t_Co=256
 colorscheme peachpuff
 
 let g:airline_theme="wombat"
+let g:airline_powerline_fonts = 1
 
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
