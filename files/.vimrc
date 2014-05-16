@@ -18,8 +18,14 @@ let g:syntastic_enable_signs=1
 let g:syntastic_ignore_files = ['\.py$']
 
 let g:pymode_python='python'
+let g:pymode_lint_ignore="C901,E501,W601"
+let g:pymode_doc = 0
+let g:pymode_rope_complete_on_dot = 0
+
 
 syntax on
+hi Folded ctermbg=0
+
 if has('mouse')
 	"stop mouse dragging triggering visual mode
 	"you can still select stuff by shift dragging
@@ -74,6 +80,7 @@ map OD <Left>
 nnoremap \ :noh<CR>
 
 map Q gqi{
+map <F6> <Esc>:w<CR>
 
 "copy/paste from X clipboard
 map <Leader>y "+y
