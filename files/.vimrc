@@ -25,6 +25,7 @@ let g:pymode_rope_complete_on_dot = 0
 
 syntax on
 hi Folded ctermbg=0
+hi MatchParen ctermbg=0
 
 if has('mouse')
 	"stop mouse dragging triggering visual mode
