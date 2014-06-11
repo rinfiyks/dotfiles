@@ -275,13 +275,13 @@ settings = {
     timestamp_format = "%H:%M:%S";
   };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = {
+    autolog = "yes";
+    autolog_path = "~/irclogs/%Y/%m/%d/$tag/$0.log";
+  };
 };
 ignores = (
-  { level = "JOINS PARTS QUITS"; },
-  {
-    level = "ALL";
-    pattern = "^(up|down|left|right|a|b|start|select|anarchy|democracy|[1234567890])+$";
-    regexp = "yes";
-    channels = ( "#twitchplayspokemon" );
-  }
+  { level = "JOINS PARTS QUITS"; }
 );
+hilights = ( { text = "rinfiyks"; nick = "yes"; word = "yes"; } );
+logs = { };
