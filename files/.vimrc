@@ -42,6 +42,7 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 autocmd FileType python setlocal expandtab
+autocmd FileType ruby setlocal expandtab
 
 set list
 "compile vim with +multi_byte for these chars to display correctly
