@@ -18,7 +18,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_ignore_files = ['\.py$']
 
 let g:pymode_python='python'
-let g:pymode_lint_ignore="C901,E501,W601"
+let g:pymode_lint_ignore="C901,E501,W601,W0401"
 let g:pymode_doc = 0
 let g:pymode_rope_complete_on_dot = 0
 
@@ -88,7 +88,6 @@ map <Leader>y "+y
 map <Leader>Y "+Y
 map <Leader>p "+p
 map <Leader>P "+P
-
 
 filetype off "required for vundle
 set rtp+=~/.vim/bundle/vundle 
