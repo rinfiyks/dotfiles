@@ -16,6 +16,8 @@ URxvt.keysym.M-v: perl:clipboard:paste
 
 URxvt*font: xft:Literation Mono Powerline:pixelsize=13:antialias=true:hinting=true
 URxvt*boldFont: xft:Literation Mono Powerline:bold:pixelsize=13:antialias=true:hinting=true
+xterm*faceName: xft:Literation Mono Powerline:pixelsize=13:antialias=true:hinting=true
+xterm*boldFont: xft:Literation Mono Powerline:bold:pixelsize=13:antialias=true:hinting=true
 
 URxvt*background: #242424
 URxvt*foreground: #c6c6c6
@@ -35,3 +37,21 @@ URxvt*color12:    #1b85d6
 URxvt*color13:    #ad73ba
 URxvt*color14:    #338eaa
 URxvt*color15:    #f4f4f4
+xterm*background: #242424
+xterm*foreground: #c6c6c6
+xterm*color0:     #000000
+xterm*color1:     #bf7276
+xterm*color2:     #86af80
+xterm*color3:     #968a38
+xterm*color4:     #3673b5
+xterm*color5:     #9a70b2
+xterm*color6:     #7abecc
+xterm*color7:     #dbdbdb
+xterm*color8:     #6692af
+xterm*color9:     #e5505f
+xterm*color10:    #87bc87
+xterm*color11:    #e0d95c
+xterm*color12:    #1b85d6
+xterm*color13:    #ad73ba
+xterm*color14:    #338eaa
+xterm*color15:    #f4f4f4
