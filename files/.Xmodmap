@@ -1,3 +1,4 @@
+clear Lock
 keycode 66 = Caps_Lock
 keycode 9 = Escape
 remove Lock = Caps_Lock
@@ -7,3 +8,5 @@ keycode 66 = Escape
 
 clear mod5
 keycode 108 = Alt_R
+
+keycode 107 = Super_L
