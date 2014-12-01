@@ -16,6 +16,8 @@ alias rfind='find -regextype posix-extended -regex'
 
 alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 
+alias tmux='tmux -2'
+
 alias gitclone='gitclone'
 function gitclone {
 	git clone git@github.com:rinfiyks/$@.git
