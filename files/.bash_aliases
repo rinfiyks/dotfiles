@@ -2,7 +2,7 @@ alias apt5='sudo apt-get check && sudo apt-get update && sudo apt-get dist-upgra
 
 alias bleep='paplay /usr/share/sounds/freedesktop/stereo/complete.oga'
 
-alias irc='ssh -t riki screen -r irssi'
+alias irc='mosh riki -- screen -r irssi'
 
 alias ixio='curl -F "'"f:1=<-"'" ix.io'
 
