@@ -42,6 +42,9 @@ set nocompatible
 set tabstop=4
 set shiftwidth=4
 set autoindent
+
+autocmd FileType html setlocal expandtab | setlocal tabstop=2 | setlocal shiftwidth=2
+autocmd FileType js setlocal expandtab | setlocal tabstop=2 | setlocal shiftwidth=2
 autocmd FileType python setlocal expandtab
 autocmd FileType ruby setlocal expandtab
 

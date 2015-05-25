@@ -87,3 +87,6 @@ if ! shopt -oq posix; then
 		. /usr/share/bash-completion/bash_completion
 	fi
 fi
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
