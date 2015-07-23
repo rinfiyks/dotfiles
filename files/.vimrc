@@ -4,7 +4,7 @@ if has("gui_running")
 	hi Visual guifg=Black guibg=#9EC7F0
 	set lines=50 columns=160
 else
-	set background=dark
+	set background=light
 	"do gui stuff for normal vim in here
 endif
 
@@ -43,10 +43,14 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 
-autocmd FileType html setlocal expandtab | setlocal tabstop=2 | setlocal shiftwidth=2
-autocmd FileType js setlocal expandtab | setlocal tabstop=2 | setlocal shiftwidth=2
-autocmd FileType python setlocal expandtab
-autocmd FileType ruby setlocal expandtab
+augroup FileTypes
+	au!
+	autocmd FileType html setlocal expandtab | setlocal tabstop=2 | setlocal shiftwidth=2
+	autocmd FileType javascript setlocal expandtab | setlocal tabstop=2 | setlocal shiftwidth=2
+	autocmd FileType css setlocal expandtab | setlocal tabstop=2 | setlocal shiftwidth=2
+	autocmd FileType python setlocal expandtab
+	autocmd FileType ruby setlocal expandtab
+augroup END
 
 set list
 "compile vim with +multi_byte for these chars to display correctly
@@ -93,6 +97,8 @@ map <Leader>y "+y
 map <Leader>Y "+Y
 map <Leader>p "+p
 map <Leader>P "+P
+
+runtime macros/matchit.vim
 
 filetype off "required for vundle
 set rtp+=~/.vim/bundle/vundle 
