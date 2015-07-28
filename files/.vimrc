@@ -4,18 +4,18 @@ if has("gui_running")
 	hi Visual guifg=Black guibg=#9EC7F0
 	set lines=50 columns=160
 else
-	set background=light
+	set background=dark
 	"do gui stuff for normal vim in here
 endif
 
 set t_Co=256
 
-let g:airline_theme="sol"
-let g:airline_powerline_fonts = 1
+let g:airline_theme="dark"
+let g:airline_powerline_fonts=1
 
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
-let g:syntastic_ignore_files = ['\.py$']
+let g:syntastic_ignore_files=['\.py$']
 
 let g:pymode_python='python'
 let g:pymode_lint_ignore="C901,E501,W601,W0401"
