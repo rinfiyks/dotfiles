@@ -39,6 +39,8 @@ let mapleader=" "
 set noswapfile
 set nocompatible
 
+set laststatus=2
+
 set tabstop=4
 set shiftwidth=4
 set autoindent
@@ -50,6 +52,8 @@ augroup FileTypes
 	autocmd FileType css setlocal expandtab | setlocal tabstop=2 | setlocal shiftwidth=2
 	autocmd FileType python setlocal expandtab
 	autocmd FileType ruby setlocal expandtab
+	autocmd FileType rust setlocal expandtab
+
 augroup END
 
 set list
@@ -72,6 +76,8 @@ set linebreak
 set shell=/bin/bash\ -i
 
 set backspace=2
+
+set cryptmethod=blowfish2
 
 "lets you hide an unwritten buffer
 set hidden
@@ -108,9 +114,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'klen/python-mode'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-classpath'
-Bundle 'guns/vim-clojure-static'
-Bundle 'tpope/vim-fireplace'
 Bundle 'gmarik/vundle'
+
+Plugin 'rust-lang/rust.vim'
 
 filetype plugin indent on "required for vundle
