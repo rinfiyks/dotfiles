@@ -15,10 +15,10 @@ URxvt.perl-ext-common: clipboard,default,matcher,-option-popup,-searchable-scrol
 URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
 
-URxvt*font: xft:Literation Mono Powerline:pixelsize=13:antialias=true:hinting=true
-URxvt*boldFont: xft:Literation Mono Powerline:bold:pixelsize=13:antialias=true:hinting=true
-xterm*faceName: xft:Literation Mono Powerline:pixelsize=13:antialias=true:hinting=true
-xterm*boldFont: xft:Literation Mono Powerline:bold:pixelsize=13:antialias=true:hinting=true
+URxvt*font: xft:Literation Mono Powerline:pixelsize=15:antialias=true:hinting=true
+URxvt*boldFont: xft:Literation Mono Powerline:bold:pixelsize=15:antialias=true:hinting=true
+xterm*faceName: xft:Literation Mono Powerline:pixelsize=15:antialias=true:hinting=true
+xterm*boldFont: xft:Literation Mono Powerline:bold:pixelsize=15:antialias=true:hinting=true
 
 
 ! --- ~/.Xresources ------------------------------------------------------------
@@ -30,60 +30,61 @@ xterm*boldFont: xft:Literation Mono Powerline:bold:pixelsize=13:antialias=true:h
 
 ! --- special colors ---
 
-*background: #d6d6d6
-*foreground: #252525
+*background: #dcdcdc
+*foreground: #101010
 
 ! --- standard colors ---
 
 ! black
-*color0: #000000
+*color0: #101010
 
 ! bright_black
-*color8: #252525
+*color8: #3c3c3c
 
 ! red
-*color1: #a02226
+*color1: #8c3841
 
 ! bright_red
-*color9: #d33035
+*color9: #bb626b
 
 ! green
-*color2: #26a022
+*color2: #53753e
 
 ! bright_green
-*color10: #35d330
+*color10: #7da468
 
 ! yellow
-*color3: #a09b22
+*color3: #8c723e
 
 ! bright_yellow
-*color11: #d3ce30
+*color11: #bba068
 
 ! blue
-*color4: #2226a0
+*color4: #503b7b
 
 ! bright_blue
-*color12: #3035d3
+*color12: #7965aa
 
 ! magenta
-*color5: #9b22a0
+*color5: #8a387b
 
 ! bright_magenta
-*color13: #ce30d3
+*color13: #b862aa
 
 ! cyan
-*color6: #22a09b
+*color6: #507578
 
 ! bright_cyan
-*color14: #30d3ce
+*color14: #79a4a6
 
 ! white
-*color7: #d6d6d6
+*color7: #dcdcdc
 
 ! bright_white
-*color15: #ffffff
+*color15: #f1f1f1
 
 
 ! ------------------------------------------------------------------------------
 ! --- end of terminal colors section -------------------------------------------
 ! ------------------------------------------------------------------------------
+

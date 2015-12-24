@@ -4,13 +4,13 @@ if has("gui_running")
 	hi Visual guifg=Black guibg=#9EC7F0
 	set lines=50 columns=160
 else
-	set background=dark
+	set background=light
 	"do gui stuff for normal vim in here
 endif
 
 set t_Co=256
 
-let g:airline_theme="dark"
+let g:airline_theme="luna"
 let g:airline_powerline_fonts=1
 
 let g:syntastic_check_on_open=1
@@ -26,7 +26,6 @@ let g:pymode_rope_complete_on_dot = 0
 syntax on
 hi Visual term=reverse cterm=reverse guibg=LightGrey
 hi Folded ctermbg=0
-hi MatchParen ctermbg=0
 
 if has('mouse')
 	"stop mouse dragging triggering visual mode
@@ -107,7 +106,7 @@ map <Leader>P "+P
 runtime macros/matchit.vim
 
 filetype off "required for vundle
-set rtp+=~/.vim/bundle/vundle 
+set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'scrooloose/nerdtree'

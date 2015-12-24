@@ -43,7 +43,7 @@ function setColorPrompt() {
 		local NHCOLOR="$GREENB";
 	fi
 
-	PS1="${NHCOLOR}\u${BLUEB}@${NHCOLOR}\h${BLACKB}:${BLUEB}\w${NONE}\$([[ \$? -ne 0 ]] && echo \"${RED}\")\\$""${NONE} "
+	PS1="${NHCOLOR}\u${BLACKB}@${NHCOLOR}\h${BLACKB}:${BLACKB}\w${NONE}\$([[ \$? -ne 0 ]] && echo \"${RED}\")\\$""${NONE} "
 }
 if [ "$color_prompt" = yes ]; then
 	setColorPrompt;
