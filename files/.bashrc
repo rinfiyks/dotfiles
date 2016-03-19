@@ -1,7 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -18,7 +14,7 @@ else
 	color_prompt=
 fi
 
-function setColorPrompt() { 
+function setColorPrompt() {
 	local NONE="\[\033[0m\]"
 	local BLACK="\[\033[0;30m\]"
 	local BLACKB="\[\033[1;30m\]"
@@ -53,7 +49,7 @@ fi
 unset color_prompt
 
 if [ -x /usr/bin/dircolors ]; then
-	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+	test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
 	alias ls='ls --color=auto'
 	alias grep='grep --color=auto'
 	alias fgrep='fgrep --color=auto'
@@ -64,20 +60,12 @@ if [ -f /usr/share/doc/pkgfile/command-not-found.bash ]; then
 	. /usr/share/doc/pkgfile/command-not-found.bash
 fi
 
-if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
+if [ -f $HOME/.bash_aliases ]; then
+	. $HOME/.bash_aliases
 fi
 
-if [ -f ~/.bash_aliases_local ]; then
-	. ~/.bash_aliases_local
-fi
-
-if [ -f ~/.bashrc_local ]; then
-	. ~/.bashrc_local
-fi
-
-if [ -f /etc/profile.d/autojump.bash ]; then
-	. /etc/profile.d/autojump.bash
+if [ -f $HOME/.bash_aliases_local ]; then
+	. $HOME/.bash_aliases_local
 fi
 
 if ! shopt -oq posix; then
@@ -90,3 +78,7 @@ fi
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+if [ -f $HOME/.bashrc_local ]; then
+	. $HOME/.bashrc_local
+fi
