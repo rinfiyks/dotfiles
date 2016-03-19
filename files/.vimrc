@@ -91,7 +91,7 @@ map OB <Down>
 map OC <Right>
 map OD <Left>
 
-nnoremap \ :noh<CR>
+nnoremap <silent> \ :noh<CR>
 
 map Q gqi{
 map <F6> <Esc>:w<CR>
@@ -109,11 +109,8 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'scrooloose/nerdtree'
-Bundle 'klen/python-mode'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
 Bundle 'gmarik/vundle'
-
-Plugin 'rust-lang/rust.vim'
 
 filetype plugin indent on "required for vundle
