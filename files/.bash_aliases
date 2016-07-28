@@ -24,5 +24,5 @@ alias tmux='tmux -2'
 
 alias gitclone='gitclone'
 function gitclone {
-	git clone git@github.com:rinfiyks/$@.git
+    git clone git@github.com:rinfiyks/$@.git
 }

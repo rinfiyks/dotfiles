@@ -1,11 +1,11 @@
 if has("gui_running")
-	set guifont=Literation\ Mono\ Powerline
-	hi Normal guifg=Black guibg=#E6E6E6
-	hi Visual guifg=Black guibg=#9EC7F0
-	set lines=50 columns=160
+    set guifont=Literation\ Mono\ Powerline
+    hi Normal guifg=Black guibg=#E6E6E6
+    hi Visual guifg=Black guibg=#9EC7F0
+    set lines=50 columns=160
 else
-	set background=light
-	"do gui stuff for normal vim in here
+    set background=light
+    "do gui stuff for normal vim in here
 endif
 
 set t_Co=256
@@ -27,9 +27,9 @@ syntax on
 hi Visual term=reverse cterm=reverse guibg=LightGrey
 
 if has('mouse')
-	"stop mouse dragging triggering visual mode
-	"you can still select stuff by shift dragging
-	set mouse=nicr
+    "stop mouse dragging triggering visual mode
+    "you can still select stuff by shift dragging
+    set mouse=nicr
 endif
 
 let mapleader=" "
@@ -42,16 +42,13 @@ set laststatus=2
 set tabstop=4
 set shiftwidth=4
 set autoindent
+set expandtab
 
 augroup FileTypes
-	au!
-	autocmd FileType html setlocal expandtab | setlocal tabstop=2 | setlocal shiftwidth=2
-	autocmd FileType javascript setlocal expandtab | setlocal tabstop=2 | setlocal shiftwidth=2
-	autocmd FileType css setlocal expandtab | setlocal tabstop=2 | setlocal shiftwidth=2
-	autocmd FileType python setlocal expandtab
-	autocmd FileType ruby setlocal expandtab
-	autocmd FileType rust setlocal expandtab
-
+    au!
+    autocmd FileType html setlocal tabstop=2 | setlocal shiftwidth=2
+    autocmd FileType javascript setlocal tabstop=2 | setlocal shiftwidth=2
+    autocmd FileType css setlocal tabstop=2 | setlocal shiftwidth=2
 augroup END
 
 set list
@@ -67,7 +64,7 @@ set smartcase
 set ruler
 set number
 if version >= 704
-	set relativenumber
+    set relativenumber
 endif
 "if :wrap then don't break words
 set linebreak
