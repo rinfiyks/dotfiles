@@ -15,13 +15,7 @@ let g:airline_powerline_fonts=1
 
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
-let g:syntastic_ignore_files=['\.py$']
-
-let g:pymode_python='python'
-let g:pymode_lint_ignore="C901,E501,W601,W0401"
-let g:pymode_doc = 0
-let g:pymode_rope_complete_on_dot = 0
-
+let g:syntastic_mode_map={ 'passive_filetypes': ['java'] }
 
 syntax on
 hi Visual term=reverse cterm=reverse guibg=LightGrey
@@ -50,6 +44,8 @@ augroup FileTypes
     autocmd FileType javascript setlocal tabstop=2 | setlocal shiftwidth=2
     autocmd FileType css setlocal tabstop=2 | setlocal shiftwidth=2
 augroup END
+
+au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
 
 set list
 "compile vim with +multi_byte for these chars to display correctly
@@ -105,9 +101,9 @@ filetype off "required for vundle
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
 Bundle 'gmarik/vundle'
+Bundle 'ledger/vim-ledger'
 
 filetype plugin indent on "required for vundle
