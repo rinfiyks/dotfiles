@@ -10,7 +10,7 @@ endif
 
 set t_Co=256
 
-let g:airline_theme="luna"
+let g:airline_theme="wombat"
 let g:airline_powerline_fonts=1
 
 let g:syntastic_check_on_open=1
@@ -75,7 +75,6 @@ set hidden
 map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 map <Leader>c :bp\|bd #<CR>
-let g:NERDTreeWinPos = "right"
 let g:airline#extensions#tabline#enabled = 1
 
 "arrow keys for movement (just in case)

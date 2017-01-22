@@ -20,7 +20,6 @@ URxvt*boldFont: xft:Literation Mono Powerline:bold:pixelsize=15:antialias=true:h
 xterm*faceName: xft:Literation Mono Powerline:pixelsize=15:antialias=true:hinting=true
 xterm*boldFont: xft:Literation Mono Powerline:bold:pixelsize=15:antialias=true:hinting=true
 
-
 ! --- ~/.Xresources ------------------------------------------------------------
 ! ------------------------------------------------------------------------------
 ! --- generated with 4bit Terminal Color Scheme Designer -----------------------
@@ -30,61 +29,60 @@ xterm*boldFont: xft:Literation Mono Powerline:bold:pixelsize=15:antialias=true:h
 
 ! --- special colors ---
 
-*background: #dcdcdc
-*foreground: #101010
+*background: #181818
+*foreground: #dcdcdc
 
 ! --- standard colors ---
 
 ! black
-*color0: #101010
+*color0: #000000
 
 ! bright_black
-*color8: #3c3c3c
+*color8: #181818
 
 ! red
-*color1: #8c3841
+*color1: #de3e41
 
 ! bright_red
-*color9: #bb626b
+*color9: #f0a8a9
 
 ! green
-*color2: #53753e
+*color2: #41de3e
 
 ! bright_green
-*color10: #7da468
+*color10: #a9f0a8
 
 ! yellow
-*color3: #8c723e
+*color3: #dedc3e
 
 ! bright_yellow
-*color11: #bba068
+*color11: #f0efa8
 
 ! blue
-*color4: #503b7b
+*color4: #3e41de
 
 ! bright_blue
-*color12: #7965aa
+*color12: #a8a9f0
 
 ! magenta
-*color5: #8a387b
+*color5: #dc3ede
 
 ! bright_magenta
-*color13: #b862aa
+*color13: #efa8f0
 
 ! cyan
-*color6: #507578
+*color6: #3ededc
 
 ! bright_cyan
-*color14: #79a4a6
+*color14: #a8f0ef
 
 ! white
 *color7: #dcdcdc
 
 ! bright_white
-*color15: #f1f1f1
+*color15: #ffffff
 
 
 ! ------------------------------------------------------------------------------
 ! --- end of terminal colors section -------------------------------------------
 ! ------------------------------------------------------------------------------
-
