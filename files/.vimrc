@@ -101,7 +101,8 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'scrooloose/syntastic'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 Bundle 'gmarik/vundle'
 Bundle 'ledger/vim-ledger'
 

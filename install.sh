@@ -34,6 +34,6 @@ else
     git clone https://github.com/gmarik/vundle.git
 fi
 
-vi +BundleInstall +qall
+vim +BundleInstall +qall
 
 echo "All done"
