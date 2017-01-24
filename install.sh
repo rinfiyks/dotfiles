@@ -7,6 +7,10 @@ fi
 
 # change dir to files location in repo, in case script was called from somewhere else
 cd "$(dirname "$0")"
+
+# make sure any git dependencies are cloned and up to date
+git submodule update --init --recursive --remote
+
 filesdir="$(pwd)/files"
 
 backupdir="$(pwd)/backup/$(date "+%Y%m%d%H%M%S")"
