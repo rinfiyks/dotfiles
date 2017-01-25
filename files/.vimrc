@@ -29,6 +29,7 @@ endif
 let mapleader=" "
 
 set noswapfile
+set noundofile
 set nocompatible
 
 set laststatus=2
