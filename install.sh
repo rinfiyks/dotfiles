@@ -5,6 +5,8 @@ if [ -f ~/.bash_aliases_local ]; then
     shopt -s expand_aliases
 fi
 
+xrdb -merge "$HOME/.Xresources"
+
 # Change dir to files location in repo, in case script was called from somewhere else
 cd "$(dirname "$0")"
 
