@@ -107,6 +107,5 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'gmarik/vundle'
-Bundle 'ledger/vim-ledger'
 
 filetype plugin indent on "required for vundle
