@@ -202,4 +202,6 @@ for_window [title="^Steam Keyboard$"] floating enable
 # }
 exec_always --no-startup-id "$HOME/.config/polybar/launch.sh"
 exec_always --no-startup-id "killall compton; compton --config /home/tom/.config/compton.conf"
+
+# Requires installing some things (see comments inside)
 exec_always --no-startup-id "$HOME/.config/i3/i3scripts/autoname_workspaces.py"
