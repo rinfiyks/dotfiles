@@ -5,30 +5,19 @@ if [ -f ~/.bash_aliases_local ]; then
     shopt -s expand_aliases
 fi
 
-# change dir to files location in repo, in case script was called from somewhere else
+# Change dir to files location in repo, in case script was called from somewhere else
 cd "$(dirname "$0")"
 
-# make sure any git dependencies are cloned and up to date
+# Make sure any git dependencies are cloned and up to date
 git submodule update --init --recursive --remote
 
 filesdir="$(pwd)/files"
 
-backupdir="$(pwd)/backup/$(date "+%Y%m%d%H%M%S")"
-echo "Making backup dir: $backupdir"
-mkdir -p "$backupdir"
-
-cd "$filesdir"
-for dotfile in $(ls -1A); do
-    mv "$HOME/$dotfile" "$backupdir/$dotfile" 2>/dev/null
-    if [ $? == 0 ]; then
-        echo "Backed up previous copy of $dotfile"
-    fi
-    ln -s "$filesdir/$dotfile" "$HOME/$dotfile"
-    echo "Added $dotfile"
-done
+# Recursively create symlinks
+cp -Tabs "$filesdir" "$HOME"
 
 echo "Installing vundle for vim"
-cd ".vim/bundle"
+cd "$HOME/.vim/bundle"
 if [ -d vundle ]; then
     echo "vundle is already cloned, will pull instead"
     cd vundle
