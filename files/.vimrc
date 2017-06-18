@@ -4,7 +4,7 @@ if has("gui_running")
     hi Visual guifg=Black guibg=#9EC7F0
     set lines=50 columns=160
 else
-    set background=light
+    set background=dark
     "do gui stuff for normal vim in here
 endif
 
@@ -16,6 +16,8 @@ let g:airline_powerline_fonts=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_mode_map={ 'passive_filetypes': ['java'] }
+
+:let g:netrw_dirhistmax = 0
 
 syntax on
 hi Visual term=reverse cterm=reverse guibg=LightGrey
