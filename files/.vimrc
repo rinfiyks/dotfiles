@@ -1,5 +1,8 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 if has("gui_running")
-    set guifont=Literation\ Mono\ Powerline
+    set guifont=Powerline\ Consolas
     hi Normal guifg=Black guibg=#E6E6E6
     hi Visual guifg=Black guibg=#9EC7F0
     set lines=50 columns=160
@@ -30,6 +33,8 @@ endif
 
 let mapleader=" "
 
+set nobackup
+set nowritebackup
 set noswapfile
 set noundofile
 set nocompatible
@@ -41,14 +46,14 @@ set shiftwidth=4
 set autoindent
 set expandtab
 
+" expandtab will convert tabs to spaces when you press tab
+" the default is 4 spaces, overridden below:
 augroup FileTypes
     au!
     autocmd FileType html setlocal tabstop=2 | setlocal shiftwidth=2
     autocmd FileType javascript setlocal tabstop=2 | setlocal shiftwidth=2
     autocmd FileType css setlocal tabstop=2 | setlocal shiftwidth=2
 augroup END
-
-au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
 
 set list
 "compile vim with +multi_byte for these chars to display correctly
@@ -65,6 +70,7 @@ set number
 if version >= 704
     set relativenumber
 endif
+
 "if :wrap then don't break words
 set linebreak
 set shell=/bin/bash\ -i
@@ -88,14 +94,15 @@ map OD <Left>
 
 nnoremap <silent> \ :noh<CR>
 
-map Q gqi{
-map <F6> <Esc>:w<CR>
-
 "copy/paste from X clipboard
 map <Leader>y "+y
 map <Leader>Y "+Y
 map <Leader>p "+p
 map <Leader>P "+P
+
+if !empty(glob("$HOME/.vimrc_local"))
+    source $HOME/.vimrc_local
+endif
 
 runtime macros/matchit.vim
 
