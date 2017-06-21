@@ -1,5 +1,5 @@
-scriptencoding utf-8
 set encoding=utf-8
+scriptencoding utf-8
 
 if has("gui_running")
     set guifont=Powerline\ Consolas
