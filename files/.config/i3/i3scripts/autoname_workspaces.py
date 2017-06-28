@@ -59,6 +59,7 @@ WINDOW_ICONS = {
     'thunar': fa.icons['files-o'],
     'urxvt': fa.icons['terminal'],
     'terminator': fa.icons['terminal'],
+    'ts3client_linux_amd64': fa.icons['microphone'],
 }
 
 # This icon is used for any application not in the list above
