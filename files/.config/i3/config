@@ -47,6 +47,9 @@ bindsym XF86AudioPlay exec "playerctl play-pause"
 bindsym XF86AudioNext exec "playerctl next"
 bindsym XF86AudioPrev exec "playerctl previous"
 
+# brightness control
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 5"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 5"
 
 # kill focused window
 bindsym $mod+Shift+q kill
