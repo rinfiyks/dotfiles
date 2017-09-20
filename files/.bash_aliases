@@ -4,8 +4,6 @@ alias bleep='paplay /usr/share/sounds/freedesktop/stereo/complete.oga'
 
 alias ifc='ifconfig'
 
-alias irc='mosh riki -- screen -r irssi'
-
 alias ixio='curl -F "'"f:1=<-"'" ix.io'
 
 alias l='ls -CF'
