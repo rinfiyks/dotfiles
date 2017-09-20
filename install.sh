@@ -16,7 +16,7 @@ git submodule update --init --recursive --remote
 filesdir="$(pwd)/files"
 
 # Recursively create symlinks
-cp -Tabs "$filesdir" "$HOME"
+cp -TdRbs "$filesdir" "$HOME"
 
 echo "Installing vundle for vim"
 cd "$HOME/.vim/bundle"

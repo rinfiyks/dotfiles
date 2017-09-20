@@ -279,7 +279,14 @@ settings = {
     autolog = "yes";
     autolog_path = "~/irclogs/%Y/%m/%d/$tag/$0.log";
   };
+  "perl/core/scripts" = {
+    irssinotifier_api_token = "7808f641-f1b9-4eeb-a01b-2cee38b1f1dc";
+  };
 };
 ignores = ( { level = "JOINS PARTS QUITS"; } );
 hilights = ( { text = "rinfiyks"; nick = "no"; word = "yes"; } );
 logs = { };
+keyboard = (
+  { key = "meta-z"; id = "previous_window"; data = ""; },
+  { key = "meta-x"; id = "next_window"; data = ""; }
+);
