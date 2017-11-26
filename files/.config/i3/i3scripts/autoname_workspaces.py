@@ -51,15 +51,17 @@ WINDOW_ICONS = {
     'dota2': fa.icons['gamepad'],
     'feh': fa.icons['picture-o'],
     'firefox': fa.icons['firefox'],
+    'firefox beta': fa.icons['firefox'],
     'jetbrains-idea-ce': fa.icons['code'],
     'libreoffice': fa.icons['file-text-o'],
+    'obs': fa.icons['video-camera'],
     'okular': fa.icons['file-pdf-o'],
     'spotify': fa.icons['spotify'],
     'steam': fa.icons['steam'],
-    'thunar': fa.icons['files-o'],
-    'urxvt': fa.icons['terminal'],
     'terminator': fa.icons['terminal'],
+    'thunar': fa.icons['files-o'],
     'ts3client_linux_amd64': fa.icons['microphone'],
+    'urxvt': fa.icons['terminal'],
 }
 
 # This icon is used for any application not in the list above
