@@ -2,7 +2,7 @@ set encoding=utf-8
 scriptencoding utf-8
 
 if has("gui_running")
-    set guifont=Powerline\ Consolas
+    set guifont="Literation Mono Powerline"
     hi Normal guifg=Black guibg=#E6E6E6
     hi Visual guifg=Black guibg=#9EC7F0
     set lines=50 columns=160

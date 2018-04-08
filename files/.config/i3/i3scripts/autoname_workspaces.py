@@ -59,6 +59,7 @@ WINDOW_ICONS = {
     'spotify': fa.icons['spotify'],
     'steam': fa.icons['steam'],
     'terminator': fa.icons['terminal'],
+    'termite': fa.icons['terminal'],
     'thunar': fa.icons['files-o'],
     'ts3client_linux_amd64': fa.icons['microphone'],
     'urxvt': fa.icons['terminal'],
