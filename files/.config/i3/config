@@ -12,8 +12,8 @@
 set $mod Mod4
 #
 # i3-gaps
-gaps inner 8
-gaps outer 3
+gaps inner 6
+gaps outer 2
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -46,9 +46,9 @@ bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
 bindsym XF86AudioMute exec "amixer -q set Master toggle"
 
 # media control
-bindsym XF86AudioPlay exec "playerctl play-pause"
-bindsym XF86AudioNext exec "playerctl next"
-bindsym XF86AudioPrev exec "playerctl previous"
+bindsym $mod+F1 exec "playerctl play-pause"
+bindsym $mod+F3 exec "playerctl next"
+bindsym $mod+F2 exec "playerctl previous"
 
 # brightness control
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 5"
@@ -116,7 +116,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+z focus child
 
 # switch to workspace
 bindsym $mod+1 workspace number 1

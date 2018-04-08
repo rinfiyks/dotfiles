@@ -21,6 +21,7 @@ alert = #bd2c40
 
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
+;monitor = ${env:MONITOR:DVI-I-1}
 ;dpi = 144
 ;height = 40
 height = 27

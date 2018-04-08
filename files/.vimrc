@@ -41,8 +41,8 @@ set nocompatible
 
 set laststatus=2
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set autoindent
 set expandtab
 
@@ -50,9 +50,7 @@ set expandtab
 " the default is 4 spaces, overridden below:
 augroup FileTypes
     au!
-    autocmd FileType html setlocal tabstop=2 | setlocal shiftwidth=2
-    autocmd FileType javascript setlocal tabstop=2 | setlocal shiftwidth=2
-    autocmd FileType css setlocal tabstop=2 | setlocal shiftwidth=2
+    autocmd FileType java setlocal tabstop=4 | setlocal shiftwidth=4
 augroup END
 
 set list
@@ -81,8 +79,10 @@ set cryptmethod=blowfish2
 
 "lets you hide an unwritten buffer
 set hidden
-map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
+map <C-J> :bnext<CR>
+map <F5> :bprev<CR>
+map <F6> :bnext<CR>
 map <Leader>c :bp\|bd #<CR>
 let g:airline#extensions#tabline#enabled = 1
 

@@ -54,6 +54,7 @@ WINDOW_ICONS = {
     'firefox beta': fa.icons['firefox'],
     'jetbrains-idea-ce': fa.icons['code'],
     'libreoffice': fa.icons['file-text-o'],
+    'mysql-workbench-bin': fa.icons['database'],
     'obs': fa.icons['video-camera'],
     'okular': fa.icons['file-pdf-o'],
     'spotify': fa.icons['spotify'],
@@ -63,6 +64,7 @@ WINDOW_ICONS = {
     'thunar': fa.icons['files-o'],
     'ts3client_linux_amd64': fa.icons['microphone'],
     'urxvt': fa.icons['terminal'],
+    'xterm': fa.icons['terminal'],
 }
 
 # This icon is used for any application not in the list above
@@ -85,10 +87,10 @@ def icon_for_window(window):
 # also renumbers them in ascending order, with one gap left between monitors
 # for example: workspace numbering on two monitors: [1, 2, 3], [5, 6]
 def rename_workspaces(i3):
-    ws_infos = i3.get_workspaces()
+    ws_infos = sorted(i3.get_workspaces(), key=lambda k: k['rect']['x'])
     prev_output = None
     n = 1
-    for ws_index, workspace in enumerate(i3.get_tree().workspaces()):
+    for ws_index, workspace in enumerate(sorted(i3.get_tree().workspaces(), key=lambda k: k.rect.x)):
         ws_info = ws_infos[ws_index]
 
         name_parts = parse_workspace_name(workspace.name)

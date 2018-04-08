@@ -24,3 +24,6 @@ alias gitclone='gitclone'
 function gitclone {
     git clone git@github.com:rinfiyks/$@.git
 }
+
+alias s='git status'
+alias d='git diff'
