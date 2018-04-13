@@ -22,9 +22,9 @@ alert = #bd2c40
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
 ;monitor = ${env:MONITOR:DVI-I-1}
-;dpi = 144
-;height = 40
-height = 27
+dpi = 144
+height = 40
+;height = 27
 width = 100%
 ;offset-x = 1%
 ;offset-y = 1%
@@ -58,8 +58,9 @@ modules-right = spotify xbacklight volume memory cpu wlan battery temperature da
 
 tray-position = right
 tray-padding = 2
+tray-maxsize = 24
 ;tray-transparent = true
-;tray-background = #0063ff
+tray-background = #222222
 
 ;wm-restack = bspwm
 ;wm-restack = i3
