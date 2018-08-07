@@ -16,7 +16,7 @@ alias rfind='find -regextype posix-extended -regex'
 
 alias speedtest='wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip'
 
-alias syu='trizen -Syu'
+alias syu='yay -Syu'
 
 alias tmux='tmux -2'
 
