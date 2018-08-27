@@ -39,7 +39,12 @@ function setColorPrompt() {
         local NHCOLOR="$GREENB";
     fi
 
-    PS1="${NHCOLOR}\u${NONE}@${NHCOLOR}\h${NONE}:${NHCOLOR}\w${NONE}\$([[ \$? -ne 0 ]] && echo \"${RED}\")\\$""${NONE} "
+    if [ -e /usr/share/git/completion/git-prompt.sh ]; then
+      . /usr/share/git/completion/git-prompt.sh
+      PS1="${NHCOLOR}\u${NONE}@${NHCOLOR}\h${NONE}:${NHCOLOR}\w${YELLOW}\$(__git_ps1)${NONE}\$([[ \$? -ne 0 ]] && echo \"${RED}\")\\$""${NONE} "
+    else
+      PS1="${NHCOLOR}\u${NONE}@${NHCOLOR}\h${NONE}:${NHCOLOR}\w${NONE}\$([[ \$? -ne 0 ]] && echo \"${RED}\")\\$""${NONE} "
+    fi
 }
 if [ "$color_prompt" = yes ]; then
     setColorPrompt;
