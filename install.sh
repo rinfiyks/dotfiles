@@ -6,7 +6,9 @@ if [ -f ~/.bash_aliases_local ]; then
 fi
 
 if [ -n "$DISPLAY" ]; then
-    xrdb -merge "$HOME/.Xresources"
+    mkdir -p "$HOME/.Xresources.d"
+    touch "$HOME/.Xresources.d/local"
+    xrdb "$HOME/.Xresources"
 fi
 
 # Change dir to files location in repo, in case script was called from somewhere else

@@ -9,4 +9,4 @@ The `install.sh` script will clone [vundle](https://github.com/gmarik/vundle) an
 When an edit to a dotfile is pushed, you don't need to run `install.sh`. Simply pull the repo. This is because the dotfile in your home directory is symlinked. For newly added files or vim plugins, run `install.sh`.
 
 ## High dpi
-Uncomment `Xft.dpi` setting in `.Xresources`, `dpi`/`height` value in `.config/polybar/config`, and dpi line for rofi in `.config/i3/config`.
+Uncomment `dpi`/`height` value in `.config/polybar/config` and dpi line for rofi in `.config/i3/config`. Add `Xft.dpi: 144` to `~/.Xresources.d/local`.

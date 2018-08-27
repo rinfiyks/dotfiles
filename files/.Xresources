@@ -1,4 +1,4 @@
-!Xft.dpi: 144
+#include ".Xresources.d/local"
 URxvt*iconFile: /usr/share/icons/Moka/48x48/apps/terminal.png
 URxvt*internalBorder: 4
 URxvt*iso14755: false
