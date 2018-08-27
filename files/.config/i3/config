@@ -12,8 +12,8 @@
 set $mod Mod4
 #
 # i3-gaps
-gaps inner 6
-gaps outer 2
+gaps inner 0
+gaps outer 0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -215,7 +215,7 @@ for_window [class=".*"] title_format " %title"
 
 # Other stuff
 
-bindsym $mod+l exec "i3lock-fancy -f Futura"
+bindsym $mod+l exec "i3lock-fancy-dualmonitor -f Futura -p"
 
 exec_always --no-startup-id "$HOME/.config/polybar/launch.sh"
 exec_always --no-startup-id "killall compton; compton --config /home/tom/.config/compton.conf"
