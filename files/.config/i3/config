@@ -57,6 +57,10 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 5"
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# scratchpad
+bindsym $mod+grave scratchpad show
+bindsym $mod+Shift+grave move scratchpad
+
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 
