@@ -51,7 +51,7 @@ WINDOW_ICONS = {
     'dota2': fa.icons['gamepad'],
     'feh': fa.icons['picture-o'],
     'firefox': fa.icons['firefox'],
-    'firefox beta': fa.icons['firefox'],
+    'gvim': fa.icons['file-text'],
     'jetbrains-idea-ce': fa.icons['code'],
     'libreoffice': fa.icons['file-text-o'],
     'mysql-workbench-bin': fa.icons['database'],
