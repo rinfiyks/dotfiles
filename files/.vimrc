@@ -2,13 +2,13 @@ set encoding=utf-8
 scriptencoding utf-8
 
 if has("gui_running")
-    set guifont="Literation Mono Powerline"
-    hi Normal guifg=Black guibg=#E6E6E6
-    hi Visual guifg=Black guibg=#9EC7F0
-    set lines=50 columns=160
+  set guifont="Literation Mono Powerline"
+  hi Normal guifg=Black guibg=#E6E6E6
+  hi Visual guifg=Black guibg=#9EC7F0
+  set lines=50 columns=160
 else
-    set background=dark
-    "do gui stuff for normal vim in here
+  set background=dark
+  "do gui stuff for normal vim in here
 endif
 
 set t_Co=256
@@ -26,9 +26,9 @@ syntax on
 hi Visual term=reverse cterm=reverse guibg=LightGrey
 
 if has('mouse')
-    "stop mouse dragging triggering visual mode
-    "you can still select stuff by shift dragging
-    set mouse=nicr
+  "stop mouse dragging triggering visual mode
+  "you can still select stuff by shift dragging
+  set mouse=nicr
 endif
 
 let mapleader=" "
@@ -49,8 +49,8 @@ set expandtab
 " expandtab will convert tabs to spaces when you press tab
 " the default is 4 spaces, overridden below:
 augroup FileTypes
-    au!
-    autocmd FileType java setlocal tabstop=4 | setlocal shiftwidth=4
+  au!
+  autocmd FileType java setlocal tabstop=4 | setlocal shiftwidth=4
 augroup END
 
 set list
@@ -66,7 +66,7 @@ set smartcase
 set ruler
 set number
 if version >= 704
-    set relativenumber
+  set relativenumber
 endif
 
 "if :wrap then don't break words
@@ -101,7 +101,7 @@ map <Leader>p "+p
 map <Leader>P "+P
 
 if !empty(glob("$HOME/.vimrc_local"))
-    source $HOME/.vimrc_local
+  source $HOME/.vimrc_local
 endif
 
 runtime macros/matchit.vim
