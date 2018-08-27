@@ -15,5 +15,7 @@ if [[ $? == 0 ]]; then
   title=$(playerctl -p spotify metadata xesam:title)
 
   echo -e "$icon  $artist - $title"
+else
+  echo
 fi
 
