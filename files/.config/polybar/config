@@ -54,7 +54,7 @@ font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 modules-left = bspwm i3
 modules-center =
-modules-right = spotify xbacklight volume memory cpu wlan battery temperature date powermenu
+modules-right = spotify xbacklight volume rfkill wlan memory cpu temperature battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -228,11 +228,11 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -376,6 +376,15 @@ exec = "$HOME/.config/polybar/spotify.sh"
 format-underline = #6ae368
 
 tail = true
+interval = 1
+
+[module/rfkill]
+type = custom/script
+
+exec-if = "$HOME/.config/polybar/rfkill.sh"
+exec = echo "wlan off"
+format-underline = #9f78e1
+
 interval = 1
 
 [settings]
