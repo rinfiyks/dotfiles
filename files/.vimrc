@@ -20,7 +20,8 @@ let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 let g:syntastic_mode_map={ 'passive_filetypes': ['java'] }
 
-:let g:netrw_dirhistmax = 0
+let g:netrw_dirhistmax = 0
+let g:netrw_liststyle = 3
 
 syntax on
 hi Visual term=reverse cterm=reverse guibg=LightGrey
