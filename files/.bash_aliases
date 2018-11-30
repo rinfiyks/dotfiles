@@ -27,3 +27,6 @@ function gitclone {
 
 alias s='git status'
 alias d='git diff'
+
+alias curl='curl -w "\n"'
+alias tw='p=${PWD//*\//} && tmux rename-window "${p:-/}"'

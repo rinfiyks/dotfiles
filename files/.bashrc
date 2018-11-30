@@ -1,8 +1,16 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# ignore duplicate consecutive commands and ignore commands that start with whitespace
 HISTCONTROL=ignoreboth
+
+# append rather than overwrite history file
 shopt -s histappend
+
+# append immediately to history file (use `history -n` to read the updates into an existing session)
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
+# infinite history size
 HISTSIZE=""
 HISTFILESIZE=""
 # Make sure terminal wraps lines correctly after resize
