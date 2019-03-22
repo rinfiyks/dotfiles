@@ -16,6 +16,9 @@ HISTFILESIZE=""
 # Make sure terminal wraps lines correctly after resize
 shopt -s checkwinsize
 
+# So that you can do C-s for i-search
+stty -ixon
+
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
   color_prompt=yes
 else
