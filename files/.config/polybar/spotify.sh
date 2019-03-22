@@ -1,8 +1,8 @@
 #!/bin/bash
 
-playerctl -p spotify metadata > /dev/null 2>&1
+res=$(playerctl -p spotify metadata 2>&1)
 
-if [[ $? == 0 ]]; then
+if [[ "$res" != "No players found" ]]; then
 
   icon=$(playerctl -p spotify status |
     grep -q Paused
