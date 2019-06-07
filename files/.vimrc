@@ -18,10 +18,16 @@ let g:airline_powerline_fonts=1
 
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
-let g:syntastic_mode_map={ 'passive_filetypes': ['java'] }
+let g:syntastic_mode_map={ 'passive_filetypes': ['java', 'scala'] }
 
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
 let g:netrw_dirhistmax = 0
 let g:netrw_liststyle = 3
+let g:netrw_winsize = 20
+
+set fillchars+=vert:│
+highlight VertSplit cterm=NONE ctermfg=Black ctermbg=Blue
 
 syntax on
 hi Visual term=reverse cterm=reverse guibg=LightGrey
@@ -76,8 +82,6 @@ set shell=/bin/bash\ -i
 
 set backspace=2
 
-set cryptmethod=blowfish2
-
 "lets you hide an unwritten buffer
 set hidden
 map <C-K> :bprev<CR>
@@ -111,9 +115,10 @@ filetype off "required for vundle
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
+Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
-Bundle 'gmarik/vundle'
 
 filetype plugin indent on "required for vundle
