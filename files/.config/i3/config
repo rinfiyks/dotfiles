@@ -41,8 +41,8 @@ bindsym $mod+grave scratchpad show
 bindsym $mod+Shift+grave move scratchpad
 
 # start rofi
-bindsym $mod+d exec "rofi -show run"
-# bindsym $mod+d exec "rofi -dpi 144 -show run"
+# bindsym $mod+d exec "rofi -show run"
+bindsym $mod+d exec "rofi -dpi 144 -show run"
 
 # change focus
 bindsym $mod+h focus left
@@ -188,7 +188,7 @@ for_window [class=".*"] title_format " %title"
 
 # Other stuff
 
-bindsym $mod+o exec "i3lock-fancy-dualmonitor -f Futura -p"
+bindsym $mod+o exec "/home/tom/dev/i3lock-fancy/i3lock-fancy"
 
 exec_always --no-startup-id "$HOME/.config/polybar/launch.sh"
 exec_always --no-startup-id "killall compton; compton --config /home/tom/.config/compton.conf"

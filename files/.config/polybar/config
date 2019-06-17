@@ -21,10 +21,10 @@ alert = #bd2c40
 
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
-;monitor = ${env:MONITOR:DVI-I-1}
-;dpi = 144
-;height = 40
-height = 27
+monitor = ${env:MONITOR:eDP-1}
+dpi = 144
+height = 40
+;height = 27
 width = 100%
 ;offset-x = 1%
 ;offset-y = 1%
@@ -37,8 +37,9 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-;border-size = 4
-;border-color = #00000000
+border-size = 0
+border-bottom-size = 0
+border-color = #00000000
 
 padding-left = 0
 padding-right = 2
@@ -54,7 +55,7 @@ font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 modules-left = bspwm i3
 modules-center =
-modules-right = spotify xbacklight volume rfkill wlan memory cpu temperature battery date powermenu
+modules-right = blink spotify xbacklight volume rfkill wlan memory cpu temperature battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -376,6 +377,14 @@ exec = "$HOME/.config/polybar/spotify.sh"
 format-underline = #6ae368
 label-font = 3
 
+tail = true
+interval = 1
+
+[module/blink]
+type = custom/script
+exec = "$HOME/scripts/blink.py"
+label-font = 3
+format-underline = #6a68e3
 tail = true
 interval = 1
 
