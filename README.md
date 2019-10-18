@@ -8,4 +8,4 @@ Sometimes you want exactly the same dotfile across all your machines except for 
 ### Vim plugins
 The `install.sh` script will clone [vundle](https://github.com/gmarik/vundle) and run BundleInstall in vim automatically. You shouldn't need to do anything.
 ### Getting updates
-When an edit to a dotfile is pushed, you don't need to run `install.sh`. Simply pull the repo. This is because the dotfile in your home directory is symlinked. For newly added files or vim plugins, run `install.sh`.
+When an edit to a dotfile is pushed, you don't need to run `install.sh`. Simply pull the repo. This is because the dotfile in your home directory is symlinked. For newly added files or vim plugins, run `install.sh`. If a templated dotfile is changed, run `generate-from-templates.py`.
