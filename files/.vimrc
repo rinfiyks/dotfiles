@@ -2,7 +2,6 @@ set encoding=utf-8
 scriptencoding utf-8
 
 if has("gui_running")
-  set guifont=Hack\ 10
   hi Normal guifg=Black guibg=#E6E6E6
   hi Visual guifg=Black guibg=#9EC7F0
   set lines=50 columns=160
@@ -15,6 +14,8 @@ set t_Co=256
 
 let g:airline_theme="wombat"
 let g:airline_powerline_fonts=1
+
+let g:ctrlp_working_path_mode = 'a'
 
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
