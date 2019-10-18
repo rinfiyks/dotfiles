@@ -20,15 +20,9 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/top]
-;monitor = ${env:MONITOR:HDMI-1}
-;monitor = ${env:MONITOR:eDP-1}
-;dpi = 144
-;height = 40
-height = 27
+dpi = {@ dpi @}
+height = {@ polybar.height @}
 width = 100%
-;offset-x = 1%
-;offset-y = 1%
-;radius = 6.0
 fixed-center = false
 
 background = ${colors.background}

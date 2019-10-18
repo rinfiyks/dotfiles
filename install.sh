@@ -17,9 +17,11 @@ cd "$(dirname "$0")"
 # Make sure any git dependencies are cloned and up to date
 git submodule update --init --recursive --remote
 
-filesdir="$(pwd)/files"
+# Generate dotfiles from templates
+./generate-from-templates.py
 
 # Recursively create symlinks
+filesdir="$(pwd)/files"
 cp -TdRbs "$filesdir" "$HOME"
 
 echo "Installing vundle for vim"

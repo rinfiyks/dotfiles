@@ -41,8 +41,7 @@ bindsym $mod+grave scratchpad show
 bindsym $mod+Shift+grave move scratchpad
 
 # start rofi
-# bindsym $mod+d exec "rofi -show run"
-bindsym $mod+d exec "rofi -dpi 144 -show run"
+bindsym $mod+d exec "rofi -dpi {@ dpi @} -show run"
 
 # change focus
 bindsym $mod+h focus left

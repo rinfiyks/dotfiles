@@ -1,0 +1,4 @@
+# Ignore files that are generated from templates
+files/.Xresources
+files/.config/i3/config
+files/.config/polybar/config
