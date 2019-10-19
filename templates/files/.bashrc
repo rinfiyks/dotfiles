@@ -19,7 +19,7 @@ shopt -s checkwinsize
 # So that you can do C-s for i-search
 stty -ixon
 
-if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null && false; then
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
   NONE="\[\033[0m\]"
   BLACK="\[\033[0;30m\]"
   BLACKB="\[\033[1;30m\]"
@@ -50,7 +50,7 @@ if [ -e /usr/share/git/completion/git-prompt.sh ]; then
   GIT_PS1="${YELLOW}\$(__git_ps1)"
 fi
 
-PS1="${NHCOLOR}\u${NONE}@${NHCOLOR}\h${NONE}:${NHCOLOR}\w${GIT_PS1}${NONE}\$([[ \$? -ne 0 ]] && echo \"${RED}\")\\$""${NONE} "
+PS1="${NHCOLOR}\u${NONE}@${NHCOLOR}\h${NONE}:${NHCOLOR}\w{@ bashrc.post-host @}${GIT_PS1}${NONE}\$([[ \$? -ne 0 ]] && echo \"${RED}\")\\$""${NONE} "
 
 if [ -x /usr/bin/dircolors ]; then
   test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
