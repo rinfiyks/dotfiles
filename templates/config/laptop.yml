@@ -1,4 +1,7 @@
+dpi: 144
+
+alacritty:
+  point-size: 7.5
+
 polybar:
   height: 40
-
-dpi: 144

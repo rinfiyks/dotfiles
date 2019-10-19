@@ -1,5 +1,6 @@
 # Ignore files that are generated from templates
 files/.bashrc
 files/.Xresources
+files/.config/alacritty/alacritty.yml
 files/.config/i3/config
 files/.config/polybar/config

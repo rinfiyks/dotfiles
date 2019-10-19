@@ -1,4 +1,5 @@
-polybar:
-  monitor: monitor = ${env:MONITOR:DVI-I-1}
 bashrc:
   post-host: ' ${PURPLE}(\${AWS_PROFILE:-default})'
+
+polybar:
+  monitor: monitor = ${env:MONITOR:DVI-I-1}
