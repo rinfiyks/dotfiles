@@ -19,51 +19,38 @@ shopt -s checkwinsize
 # So that you can do C-s for i-search
 stty -ixon
 
-if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-  color_prompt=yes
-else
-  color_prompt=
-fi
-
-function setColorPrompt() {
-  local NONE="\[\033[0m\]"
-  local BLACK="\[\033[0;30m\]"
-  local BLACKB="\[\033[1;30m\]"
-  local RED="\[\033[0;31m\]"
-  local REDB="\[\033[1;31m\]"
-  local GREEN="\[\033[0;32m\]"
-  local GREENB="\[\033[1;32m\]"
-  local YELLOW="\[\033[0;33m\]"
-  local YELLOWB="\[\033[1;33m\]"
-  local BLUE="\[\033[0;34m\]"
-  local BLUEB="\[\033[1;34m\]"
-  local PURPLE="\[\033[0;35m\]"
-  local PURPLEB="\[\033[1;35m\]"
-  local CYAN="\[\033[0;36m\]"
-  local CYANB="\[\033[1;36m\]"
-  local WHITE="\[\033[0;37m\]"
-  local WHITEB="\[\033[1;37m\]"
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null && false; then
+  NONE="\[\033[0m\]"
+  BLACK="\[\033[0;30m\]"
+  BLACKB="\[\033[1;30m\]"
+  RED="\[\033[0;31m\]"
+  REDB="\[\033[1;31m\]"
+  GREEN="\[\033[0;32m\]"
+  GREENB="\[\033[1;32m\]"
+  YELLOW="\[\033[0;33m\]"
+  YELLOWB="\[\033[1;33m\]"
+  BLUE="\[\033[0;34m\]"
+  BLUEB="\[\033[1;34m\]"
+  PURPLE="\[\033[0;35m\]"
+  PURPLEB="\[\033[1;35m\]"
+  CYAN="\[\033[0;36m\]"
+  CYANB="\[\033[1;36m\]"
+  WHITE="\[\033[0;37m\]"
+  WHITEB="\[\033[1;37m\]"
 
   if [ $EUID == 0 ]; then
-    local NHCOLOR="$REDB";
+    NHCOLOR="$REDB";
   else
-    local NHCOLOR="$GREENB";
+    NHCOLOR="$GREENB";
   fi
-
-  if [ -e /usr/share/git/completion/git-prompt.sh ]; then
-    . /usr/share/git/completion/git-prompt.sh
-    PS1="${NHCOLOR}\u${NONE}@${NHCOLOR}\h${NONE}:${NHCOLOR}\w${YELLOW}\$(__git_ps1)${NONE}\$([[ \$? -ne 0 ]] && echo \"${RED}\")\\$""${NONE} "
-  else
-    PS1="${NHCOLOR}\u${NONE}@${NHCOLOR}\h${NONE}:${NHCOLOR}\w${NONE}\$([[ \$? -ne 0 ]] && echo \"${RED}\")\\$""${NONE} "
-  fi
-}
-
-if [ "$color_prompt" = yes ]; then
-  setColorPrompt;
-else
-  PS1="\u@\h:\w$ "
 fi
-unset color_prompt
+
+if [ -e /usr/share/git/completion/git-prompt.sh ]; then
+  . /usr/share/git/completion/git-prompt.sh
+  GIT_PS1="${YELLOW}\$(__git_ps1)"
+fi
+
+PS1="${NHCOLOR}\u${NONE}@${NHCOLOR}\h${NONE}:${NHCOLOR}\w${GIT_PS1}${NONE}\$([[ \$? -ne 0 ]] && echo \"${RED}\")\\$""${NONE} "
 
 if [ -x /usr/bin/dircolors ]; then
   test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
