@@ -6,8 +6,6 @@ if [ -f ~/.bash_aliases_local ]; then
 fi
 
 if [ -n "$DISPLAY" ]; then
-  mkdir -p "$HOME/.Xresources.d"
-  touch "$HOME/.Xresources.d/local"
   xrdb "$HOME/.Xresources"
 fi
 
