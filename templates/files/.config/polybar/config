@@ -20,6 +20,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/top]
+{@ polybar.monitor @}
 dpi = {@ dpi @}
 height = {@ polybar.height @}
 width = 100%
