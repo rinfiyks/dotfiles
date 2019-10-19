@@ -187,7 +187,7 @@ for_window [class=".*"] title_format " %title"
 
 # Other stuff
 
-bindsym $mod+o exec "/home/tom/dev/i3lock-fancy/i3lock-fancy"
+bindsym $mod+o exec "/home/tom/bin/i3lock-fancy"
 
 exec_always --no-startup-id "$HOME/.config/polybar/launch.sh"
 exec_always --no-startup-id "killall compton; compton --config /home/tom/.config/compton.conf"
