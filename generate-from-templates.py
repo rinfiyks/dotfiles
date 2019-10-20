@@ -39,7 +39,10 @@ def generate_files(config):
         path = root.split(os.sep)
         for file in files:
             filled = fill_in_template(os.path.join(root, file), config)
-            with open(os.path.join('files', *path[2:], file), 'w') as f:
+            file_path = os.path.join('files', *path[2:], file)
+            try: os.makedirs(os.path.dirname(file_path))
+            except: pass
+            with open(file_path, 'w') as f:
                 f.write('\n'.join(filled))
 
 
@@ -58,7 +61,7 @@ def replace_match(match, config):
     key = match.strip('{@} ')
     value = nested_get(config, key.split('.'))
     if value: return str(value)
-    else: return ""
+    else: return ''
 
 
 def nested_get(input_dict, nested_key):
