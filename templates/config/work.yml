@@ -1,3 +1,6 @@
+alacritty:
+  point-size: 10
+
 bashrc:
   post-host: ' ${PURPLE}(\${AWS_PROFILE:-default})'
 

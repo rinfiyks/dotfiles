@@ -5,3 +5,4 @@ alacritty:
 
 polybar:
   height: 40
+  monitor: monitor = ${env:MONITOR:eDP-1}
