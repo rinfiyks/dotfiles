@@ -65,7 +65,6 @@ WINDOW_ICONS = {
     'termite': fa.icons['terminal'],
     'thunar': fa.icons['files-o'],
     'ts3client_linux_amd64': fa.icons['microphone'],
-    'urxvt': fa.icons['terminal'],
     'xterm': fa.icons['terminal'],
 }
 

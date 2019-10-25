@@ -1,23 +1,5 @@
 Xft.dpi: {@ dpi @}
-URxvt*iconFile: /usr/share/icons/Moka/48x48/apps/terminal.png
-URxvt*internalBorder: 4
-URxvt*iso14755: false
-URxvt*letterSpace: -1
-URxvt*saveLines: 1000000
-URxvt*scrollBar: false
-URxvt*scrollstyle: rxvt
-URxvt*termName: rxvt
-URxvt*transparent: false
-URxvt*urgentOnBell: true
-URxvt*visualBell: false
 
-URxvt.perl-ext-common: clipboard,default,matcher,-option-popup,-searchable-scrollback,-selection-popup
-
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
-
-URxvt*font: xft:Literation Mono Powerline:pixelsize=15:antialias=true:hinting=true
-URxvt*boldFont: xft:Literation Mono Powerline:bold:pixelsize=15:antialias=true:hinting=true
 xterm*faceName: xft:Literation Mono Powerline:pixelsize=15:antialias=true:hinting=true
 xterm*boldFont: xft:Literation Mono Powerline:bold:pixelsize=15:antialias=true:hinting=true
 
