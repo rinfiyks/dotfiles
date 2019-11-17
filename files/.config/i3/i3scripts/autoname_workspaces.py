@@ -51,22 +51,22 @@ WINDOW_ICONS = {
     'chromium': fa.icons['chrome'],
     'discord': fa.icons['microphone'],
     'dota2': fa.icons['gamepad'],
-    'feh': fa.icons['picture-o'],
+    'feh': fa.icons['image'],
     'firefox': fa.icons['firefox'],
     'firefoxdeveloperedition': fa.icons['firefox'],
-    'gvim': fa.icons['file-text'],
+    'gvim': fa.icons['file-alt'],
     'insomnia': fa.icons['paper-plane'],
     'jetbrains-idea-ce': fa.icons['code'],
-    'libreoffice': fa.icons['file-text-o'],
+    'libreoffice': fa.icons['file-alt'],
     'mysql-workbench-bin': fa.icons['database'],
-    'obs': fa.icons['video-camera'],
-    'okular': fa.icons['file-pdf-o'],
-    'ristretto': fa.icons['picture-o'],
+    'obs': fa.icons['video'],
+    'okular': fa.icons['file-pdf'],
+    'ristretto': fa.icons['image'],
     'spotify': fa.icons['spotify'],
     'steam': fa.icons['steam'],
     'terminator': fa.icons['terminal'],
     'termite': fa.icons['terminal'],
-    'thunar': fa.icons['files-o'],
+    'thunar': fa.icons['folder-open'],
     'thunderbird': fa.icons['envelope'],
     'ts3client_linux_amd64': fa.icons['microphone'],
     'xterm': fa.icons['terminal'],
@@ -92,7 +92,7 @@ def icon_for_window(window):
 # also renumbers them in ascending order, with one gap left between monitors
 # for example: workspace numbering on two monitors: [1, 2, 3], [5, 6]
 def rename_workspaces(i3):
-    ws_infos = sorted(i3.get_workspaces(), key=lambda k: k['rect']['x'])
+    ws_infos = i3.get_workspaces()
     prev_output = None
     n = 1
     for ws_index, workspace in enumerate(sorted(i3.get_tree().workspaces(), key=lambda k: k.rect.x)):
