@@ -2,7 +2,7 @@ alacritty:
   point-size: 10
 
 bashrc:
-  post-host: ' ${PURPLE}(\${AWS_PROFILE:-default})'
+  post-host: ' ${PURPLE}(\${AWS_ROLE:-default})'
 
 polybar:
   monitor: monitor = ${env:MONITOR:DVI-I-1}
