@@ -59,10 +59,14 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # alternatively, you can use num pad:
-bindsym $mod+Mod2+KP_4 focus left
-bindsym $mod+Mod2+KP_2 focus down
-bindsym $mod+Mod2+KP_8 focus up
-bindsym $mod+Mod2+KP_6 focus right
+bindcode $mod+Mod2+83 focus left
+bindcode $mod+Mod2+88 focus down
+bindcode $mod+Mod2+80 focus up
+bindcode $mod+Mod2+85 focus right
+bindcode $mod+83 focus left
+bindcode $mod+88 focus down
+bindcode $mod+80 focus up
+bindcode $mod+85 focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -77,10 +81,14 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # alternatively, you can use num pad:
-bindsym $mod+Shift+Mod2+KP_Left move left
-bindsym $mod+Shift+Mod2+KP_Down move down
-bindsym $mod+Shift+Mod2+KP_Up move up
-bindsym $mod+Shift+Mod2+KP_Right move right
+bindcode $mod+Shift+Mod2+83 move left
+bindcode $mod+Shift+Mod2+88 move down
+bindcode $mod+Shift+Mod2+80 move up
+bindcode $mod+Shift+Mod2+85 move right
+bindcode $mod+Shift+83 move left
+bindcode $mod+Shift+88 move down
+bindcode $mod+Shift+80 move up
+bindcode $mod+Shift+85 move right
 
 # split in horizontal orientation (mnemonic: b for Beside)
 bindsym $mod+b split h
