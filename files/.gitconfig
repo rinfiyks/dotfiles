@@ -1,0 +1,17 @@
+[user]
+  name = rinfiyks
+  email = tom.gould.92@gmail.com
+
+[IncludeIf "gitdir:~/dev/bc/"]
+  path = ~/dev/bc/.gitconfig
+
+[alias]
+  co = checkout
+  lol = log --graph --all --pretty=format:'%C(yellow)%h %Cred%ar %Cblue%an%C(auto)%d %Creset%s'
+  lold = log --graph --all --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%C(auto)%d %Creset%s'
+  unmerged = "!f(){ git branch -r --no-merged HEAD --sort=committerdate --format='%(color:green)%(committerdate:relative)%(color:reset)%09%(color:red)%(authorname)%(color:reset)%09%(color:yellow)%(refname:short)%(color:reset)' --color=always | column -t -s $'\t'; }; f"
+  find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
+  show-merge = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
+
+[diff]
+  noprefix = true
