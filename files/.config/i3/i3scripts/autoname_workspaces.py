@@ -49,6 +49,7 @@ WINDOW_ICONS = {
     'alacritty': fa.icons['terminal'],
     'atom': fa.icons['code'],
     'chromium': fa.icons['chrome'],
+    'chromium-browser': fa.icons['chrome'],
     'discord': fa.icons['microphone'],
     'dota2': fa.icons['gamepad'],
     'feh': fa.icons['image'],
