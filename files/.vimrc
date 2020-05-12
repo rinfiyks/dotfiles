@@ -83,6 +83,10 @@ set shell=/bin/bash\ -i
 
 set backspace=2
 
+set notimeout
+set ttimeout
+set timeoutlen=100
+
 "lets you hide an unwritten buffer
 set hidden
 map <C-K> :bprev<CR>
