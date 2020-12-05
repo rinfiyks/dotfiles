@@ -67,6 +67,7 @@ WINDOW_ICONS = {
     'steam': fa.icons['steam'],
     'terminator': fa.icons['terminal'],
     'termite': fa.icons['terminal'],
+    'tibia': fa.icons['gamepad'],
     'thunar': fa.icons['folder-open'],
     'thunderbird': fa.icons['envelope'],
     'ts3client_linux_amd64': fa.icons['microphone'],

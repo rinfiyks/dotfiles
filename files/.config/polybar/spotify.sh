@@ -14,8 +14,11 @@ if [[ "$res" != "No players found" ]]; then
   artist=$(playerctl -p spotify metadata xesam:artist)
   title=$(playerctl -p spotify metadata xesam:title)
 
-  echo -e "$icon  $artist - $title"
+  song_details="$artist - $title"
+  echo -e "$icon  $song_details"
+  echo "$song_details" > /tmp/spotify-song
 else
   echo
+  echo > /tmp/spotify-song
 fi
 

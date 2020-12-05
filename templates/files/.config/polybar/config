@@ -8,13 +8,10 @@
 ;=====================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #cc222222
-background-alt = #4444444
-;foreground = ${xrdb:color7:#222}
+background = #222222
+background-alt = #444444
 foreground = #eedfdfdf
 foreground-alt = #777777
-;primary = #ffb52a
 primary = #ffffff
 secondary = #e60053
 alert = #bd2c40
@@ -43,10 +40,11 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
-font-1 = FontAwesome:size=7;0
-font-2 = FontAwesome:size=10;0
-font-3 = Wuncon Siji:pixelsize=10;0
-font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Free:pixelsize=11;0
+font-4 = Font Awesome 5 Free Solid:pixelsize=11;0
+font-5 = Font Awesome 5 Brands:pixelsize=11;0
 
 modules-left = i3
 modules-center =
@@ -102,26 +100,22 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
-label-focused-font = 3
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
-label-unfocused-font = 3
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
-label-visible-font = 3
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
-label-urgent-font = 3
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
@@ -147,12 +141,9 @@ label = BL
 bar-width = 8
 bar-indicator = |
 bar-indicator-foreground = #ff
-bar-indicator-font = 2
 bar-fill = ─
-bar-fill-font = 2
 bar-fill-foreground = #9f78e1
 bar-empty = ─
-bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
 [module/backlight-acpi]
@@ -171,7 +162,7 @@ label = %percentage%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
@@ -252,11 +243,8 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
 bar-volume-fill = ─
-bar-volume-fill-font = 2
 bar-volume-empty = ─
-bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
@@ -292,7 +280,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
+format-underline = #f59411
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
@@ -337,7 +325,6 @@ type = custom/script
 
 exec = "$HOME/.config/polybar/spotify.sh"
 format-underline = #6ae368
-label-font = 3
 
 tail = true
 interval = 1
@@ -345,7 +332,6 @@ interval = 1
 [module/blink]
 type = custom/script
 exec = "$HOME/scripts/blink.py"
-label-font = 3
 format-underline = #6a68e3
 tail = true
 interval = 1
