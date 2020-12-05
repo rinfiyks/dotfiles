@@ -48,7 +48,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=11;0
 
 modules-left = i3
 modules-center =
-modules-right = blink spotify xbacklight volume rfkill wlan memory cpu temperature battery date powermenu
+modules-right = spotify xbacklight volume rfkill wlan memory cpu temperature battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -326,13 +326,6 @@ type = custom/script
 exec = "$HOME/.config/polybar/spotify.sh"
 format-underline = #6ae368
 
-tail = true
-interval = 1
-
-[module/blink]
-type = custom/script
-exec = "$HOME/scripts/blink.py"
-format-underline = #6a68e3
 tail = true
 interval = 1
 
