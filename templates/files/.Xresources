@@ -1,5 +1,7 @@
 Xft.dpi: {@ dpi @}
 
+Xcursor.size: {@ cursor-size @}
+
 xterm*faceName: xft:Literation Mono Powerline:pixelsize=15:antialias=true:hinting=true
 xterm*boldFont: xft:Literation Mono Powerline:bold:pixelsize=15:antialias=true:hinting=true
 

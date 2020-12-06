@@ -1,5 +1,7 @@
 dpi: 100
 
+cursor-size: 32
+
 alacritty:
   point-size: 11
   colours: |2
