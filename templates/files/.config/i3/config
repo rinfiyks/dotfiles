@@ -170,10 +170,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
 # Borders
 for_window [class="^.*"] border none
 for_window [floating] border normal 1
+
+# Floating
+for_window [class="Qalculate"] floating enable
 
 # Colours
 # class                 border  backgr. text    indicator child_border
