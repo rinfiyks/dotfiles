@@ -50,7 +50,7 @@ WINDOW_ICONS = {
     'atom': fa.icons['code'],
     'chromium': fa.icons['chrome'],
     'chromium-browser': fa.icons['chrome'],
-    'discord': fa.icons['microphone'],
+    'discord': fa.icons['discord'],
     'dota2': fa.icons['gamepad'],
     'feh': fa.icons['image'],
     'firefox': fa.icons['firefox'],
