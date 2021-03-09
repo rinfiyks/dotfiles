@@ -48,7 +48,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=11;0
 
 modules-left = i3
 modules-center =
-modules-right = spotify xbacklight volume rfkill wlan memory cpu temperature battery date powermenu
+modules-right = spotify xbacklight pulseaudio rfkill wlan memory cpu temperature battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -222,30 +222,16 @@ format-underline = #0a6cf5
 
 label = %date% %time%
 
-[module/volume]
-type = internal/alsa
+[module/pulseaudio]
+type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
+label-volume =  %percentage%%
+label-muted =  %percentage%%
 
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = muted
+format-volume-underline = #fff712
+format-muted-underline = ${self.format-volume-underline}
 
-bar-volume-width = 8
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-fill = ─
-bar-volume-empty = ─
-bar-volume-empty-foreground = ${colors.foreground-alt}
+click-right = pavucontrol
 
 [module/battery]
 type = internal/battery
