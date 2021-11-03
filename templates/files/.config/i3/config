@@ -192,6 +192,7 @@ for_window [class=".*"] title_format " %title"
 
 # Other stuff
 bindsym $mod+o exec "/home/tom/bin/i3lock-fancy"
+bindsym $mod+c exec "escrotum -C"
 
 exec_always --no-startup-id "$HOME/.config/polybar/launch.sh"
 exec_always --no-startup-id "killall picom; picom --config /home/tom/.config/picom.conf"
