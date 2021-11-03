@@ -94,7 +94,7 @@ def icon_for_window(window):
 # also renumbers them in ascending order, with one gap left between monitors
 # for example: workspace numbering on two monitors: [1, 2, 3], [5, 6]
 def rename_workspaces(i3):
-    ws_infos = i3.get_workspaces()
+    ws_infos = sorted(i3.get_workspaces(), key=lambda k: k.rect.x)
     prev_output = None
     n = 1
     for ws_index, workspace in enumerate(sorted(i3.get_tree().workspaces(), key=lambda k: k.rect.x)):
