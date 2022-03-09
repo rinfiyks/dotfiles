@@ -59,6 +59,7 @@ set expandtab
 augroup FileTypes
   au!
   autocmd FileType java setlocal tabstop=4 | setlocal shiftwidth=4
+  autocmd FileType go setlocal expandtab!
 augroup END
 
 set list
