@@ -76,26 +76,26 @@ bindcode $mod+85 focus right
 ### change screen focus ###
 
 # hjkl
-bindsym $mod+Mod1+h focus output left
-bindsym $mod+Mod1+j focus output down
-bindsym $mod+Mod1+k focus output up
-bindsym $mod+Mod1+l focus output right
+bindsym $mod+Control+h focus output left
+bindsym $mod+Control+j focus output down
+bindsym $mod+Control+k focus output up
+bindsym $mod+Control+l focus output right
 
 # cursor keys
-bindsym $mod+Mod1+Left focus output left
-bindsym $mod+Mod1+Down focus output down
-bindsym $mod+Mod1+Up focus output up
-bindsym $mod+Mod1+Right focus output right
+bindsym $mod+Control+Left focus output left
+bindsym $mod+Control+Down focus output down
+bindsym $mod+Control+Up focus output up
+bindsym $mod+Control+Right focus output right
 
 # num pad
-bindcode $mod+Mod1+Mod2+83 focus output left
-bindcode $mod+Mod1+Mod2+88 focus output down
-bindcode $mod+Mod1+Mod2+80 focus output up
-bindcode $mod+Mod1+Mod2+85 focus output right
-bindcode $mod+Mod1+83 focus output left
-bindcode $mod+Mod1+88 focus output down
-bindcode $mod+Mod1+80 focus output up
-bindcode $mod+Mod1+85 focus output right
+bindcode $mod+Control+Mod2+83 focus output left
+bindcode $mod+Control+Mod2+88 focus output down
+bindcode $mod+Control+Mod2+80 focus output up
+bindcode $mod+Control+Mod2+85 focus output right
+bindcode $mod+Control+83 focus output left
+bindcode $mod+Control+88 focus output down
+bindcode $mod+Control+80 focus output up
+bindcode $mod+Control+85 focus output right
 
 ### move containers ###
 
@@ -124,26 +124,26 @@ bindcode $mod+Shift+85 move right
 ### move containers across screens ###
 
 # hjkl
-bindsym $mod+Mod1+Shift+h move output left
-bindsym $mod+Mod1+Shift+j move output down
-bindsym $mod+Mod1+Shift+k move output up
-bindsym $mod+Mod1+Shift+l move output right
+bindsym $mod+Control+Shift+h move output left
+bindsym $mod+Control+Shift+j move output down
+bindsym $mod+Control+Shift+k move output up
+bindsym $mod+Control+Shift+l move output right
 
 # cursor keys
-bindsym $mod+Mod1+Shift+Left move output left
-bindsym $mod+Mod1+Shift+Down move output down
-bindsym $mod+Mod1+Shift+Up move output up
-bindsym $mod+Mod1+Shift+Right move output right
+bindsym $mod+Control+Shift+Left move output left
+bindsym $mod+Control+Shift+Down move output down
+bindsym $mod+Control+Shift+Up move output up
+bindsym $mod+Control+Shift+Right move output right
 
 # num pad
-bindcode $mod+Mod1+Shift+Mod2+83 move output left
-bindcode $mod+Mod1+Shift+Mod2+88 move output down
-bindcode $mod+Mod1+Shift+Mod2+80 move output up
-bindcode $mod+Mod1+Shift+Mod2+85 move output right
-bindcode $mod+Mod1+Shift+83 move output left
-bindcode $mod+Mod1+Shift+88 move output down
-bindcode $mod+Mod1+Shift+80 move output up
-bindcode $mod+Mod1+Shift+85 move output right
+bindcode $mod+Control+Shift+Mod2+83 move output left
+bindcode $mod+Control+Shift+Mod2+88 move output down
+bindcode $mod+Control+Shift+Mod2+80 move output up
+bindcode $mod+Control+Shift+Mod2+85 move output right
+bindcode $mod+Control+Shift+83 move output left
+bindcode $mod+Control+Shift+88 move output down
+bindcode $mod+Control+Shift+80 move output up
+bindcode $mod+Control+Shift+85 move output right
 
 
 # split in horizontal orientation (mnemonic: b for Beside)
