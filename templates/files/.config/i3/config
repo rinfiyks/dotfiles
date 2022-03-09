@@ -49,19 +49,21 @@ bindsym $mod+d exec "rofi -dpi {@ dpi @} -show run"
 # monitor wake up hack
 bindsym $mod+Shift+m exec "xrandr --output DP-0 --mode 2560x1440 --rate 144"
 
-# change focus
+### change container focus ###
+
+# hjkl
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
+# cursor keys
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# alternatively, you can use num pad:
+# num pad
 bindcode $mod+Mod2+83 focus left
 bindcode $mod+Mod2+88 focus down
 bindcode $mod+Mod2+80 focus up
@@ -71,19 +73,45 @@ bindcode $mod+88 focus down
 bindcode $mod+80 focus up
 bindcode $mod+85 focus right
 
-# move focused window
+### change screen focus ###
+
+# hjkl
+bindsym $mod+Mod1+h focus output left
+bindsym $mod+Mod1+j focus output down
+bindsym $mod+Mod1+k focus output up
+bindsym $mod+Mod1+l focus output right
+
+# cursor keys
+bindsym $mod+Mod1+Left focus output left
+bindsym $mod+Mod1+Down focus output down
+bindsym $mod+Mod1+Up focus output up
+bindsym $mod+Mod1+Right focus output right
+
+# num pad
+bindcode $mod+Mod1+Mod2+83 focus output left
+bindcode $mod+Mod1+Mod2+88 focus output down
+bindcode $mod+Mod1+Mod2+80 focus output up
+bindcode $mod+Mod1+Mod2+85 focus output right
+bindcode $mod+Mod1+83 focus output left
+bindcode $mod+Mod1+88 focus output down
+bindcode $mod+Mod1+80 focus output up
+bindcode $mod+Mod1+85 focus output right
+
+### move containers ###
+
+# hjkl
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# alternatively, you can use the cursor keys:
+# cursor keys
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# alternatively, you can use num pad:
+# num pad
 bindcode $mod+Shift+Mod2+83 move left
 bindcode $mod+Shift+Mod2+88 move down
 bindcode $mod+Shift+Mod2+80 move up
@@ -92,6 +120,31 @@ bindcode $mod+Shift+83 move left
 bindcode $mod+Shift+88 move down
 bindcode $mod+Shift+80 move up
 bindcode $mod+Shift+85 move right
+
+### move containers across screens ###
+
+# hjkl
+bindsym $mod+Mod1+Shift+h move output left
+bindsym $mod+Mod1+Shift+j move output down
+bindsym $mod+Mod1+Shift+k move output up
+bindsym $mod+Mod1+Shift+l move output right
+
+# cursor keys
+bindsym $mod+Mod1+Shift+Left move output left
+bindsym $mod+Mod1+Shift+Down move output down
+bindsym $mod+Mod1+Shift+Up move output up
+bindsym $mod+Mod1+Shift+Right move output right
+
+# num pad
+bindcode $mod+Mod1+Shift+Mod2+83 move output left
+bindcode $mod+Mod1+Shift+Mod2+88 move output down
+bindcode $mod+Mod1+Shift+Mod2+80 move output up
+bindcode $mod+Mod1+Shift+Mod2+85 move output right
+bindcode $mod+Mod1+Shift+83 move output left
+bindcode $mod+Mod1+Shift+88 move output down
+bindcode $mod+Mod1+Shift+80 move output up
+bindcode $mod+Mod1+Shift+85 move output right
+
 
 # split in horizontal orientation (mnemonic: b for Beside)
 bindsym $mod+b split h
