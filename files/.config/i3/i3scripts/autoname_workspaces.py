@@ -57,6 +57,7 @@ WINDOW_ICONS = {
     'gvim': fa.icons['file-alt'],
     'insomnia': fa.icons['paper-plane'],
     'jetbrains-idea-ce': fa.icons['code'],
+    'jetbrains-goland': fa.icons['code'],
     'libreoffice': fa.icons['file-alt'],
     'mysql-workbench-bin': fa.icons['database'],
     'obs': fa.icons['video'],
