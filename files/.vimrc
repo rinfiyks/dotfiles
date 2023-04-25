@@ -12,9 +12,6 @@ endif
 
 set t_Co=256
 
-let g:airline_theme="wombat"
-let g:airline_powerline_fonts=1
-
 let g:ctrlp_working_path_mode = 'a'
 
 let g:syntastic_check_on_open=1
@@ -29,6 +26,7 @@ let g:netrw_winsize = 20
 
 set fillchars+=vert:│
 highlight VertSplit cterm=NONE ctermfg=Black ctermbg=Blue
+highlight MatchParen term=underline cterm=underline gui=underline ctermbg=none
 
 syntax on
 hi Visual term=reverse cterm=reverse guibg=LightGrey
@@ -95,7 +93,19 @@ map <C-J> :bnext<CR>
 map <F5> :bprev<CR>
 map <F6> :bnext<CR>
 map <Leader>c :bp\|bd #<CR>
-let g:airline#extensions#tabline#enabled = 1
+
+" Move to previous/next
+nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
+nnoremap <silent>    <A-.> <Cmd>BufferNext<CR>
+
+" Re-order to previous/next
+nnoremap <silent>    <A-<> <Cmd>BufferMovePrevious<CR>
+nnoremap <silent>    <A->> <Cmd>BufferMoveNext<CR>
+
+" Close buffer
+nnoremap <silent>    <A-c> <Cmd>BufferClose<CR>
+" Restore buffer
+nnoremap <silent>    <A-s-c> <Cmd>BufferRestore<CR>
 
 "arrow keys for movement (just in case)
 map OA <Up>
@@ -124,7 +134,7 @@ call vundle#rc()
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
+Bundle 'nvim-tree/nvim-web-devicons'
+Bundle 'romgrk/barbar.nvim'
 
 filetype plugin indent on "required for vundle
