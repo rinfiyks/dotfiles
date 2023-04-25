@@ -48,7 +48,7 @@ font-5 = Font Awesome 6 Brands:pixelsize=11;0
 
 modules-left = i3
 modules-center =
-modules-right = spotify xbacklight pulseaudio rfkill wlan memory cpu temperature battery date powermenu
+modules-right = youtube-music xbacklight pulseaudio rfkill wlan memory cpu temperature battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -306,11 +306,11 @@ menu-2-0-exec = systemctl poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
-[module/spotify]
+[module/youtube-music]
 type = custom/script
 
-exec = "$HOME/.config/polybar/spotify.sh"
-format-underline = #6ae368
+exec = "$HOME/.config/polybar/youtube-music.sh"
+format-underline = #ee2e24
 
 tail = true
 interval = 1
