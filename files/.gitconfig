@@ -2,8 +2,8 @@
   name = rinfiyks
   email = tom.gould.92@gmail.com
 
-[IncludeIf "gitdir:~/dev/bc/"]
-  path = ~/dev/bc/.gitconfig
+[include]
+  path = ~/.local.gitconfig
 
 [alias]
   co = checkout
