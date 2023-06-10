@@ -73,6 +73,7 @@ WINDOW_ICONS = {
     'thunderbird': fa.icons['envelope'],
     'ts3client_linux_amd64': fa.icons['microphone'],
     'xterm': fa.icons['terminal'],
+    'youtube music': fa.icons['youtube'],
 }
 
 # This icon is used for any application not in the list above
