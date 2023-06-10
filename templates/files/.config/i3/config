@@ -28,9 +28,9 @@ bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
 bindsym XF86AudioMute exec "amixer -q set Master toggle"
 
 # media control
-bindsym $mod+F1 exec "playerctl -p spotify play-pause"
-bindsym $mod+F3 exec "playerctl -p spotify next"
-bindsym $mod+F2 exec "playerctl -p spotify previous"
+bindsym $mod+F1 exec "playerctl -p chromium play-pause"
+bindsym $mod+F3 exec "playerctl -p chromium next"
+bindsym $mod+F2 exec "playerctl -p chromium previous"
 
 # brightness control
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 5"
