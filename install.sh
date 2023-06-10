@@ -1,5 +1,12 @@
 #!/bin/bash
 
+while getopts c: flag
+do
+    case "${flag}" in
+        c) config=${OPTARG};;
+    esac
+done
+
 if [ -f ~/.bash_aliases_local ]; then
   . ~/.bash_aliases_local
   shopt -s expand_aliases
@@ -16,7 +23,11 @@ cd "$(dirname "$0")"
 git submodule update --init --recursive --remote
 
 # Generate dotfiles from templates
-./generate-from-templates.py
+if [ -z $config ]; then
+  ./generate-from-templates.py
+else
+  ./generate-from-templates.py -c $config
+fi
 
 # Recursively create symlinks
 filesdir="$(pwd)/files"
