@@ -126,15 +126,3 @@ if !empty(glob("$HOME/.vimrc_local"))
 endif
 
 runtime macros/matchit.vim
-
-filetype off "required for vundle
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/syntastic'
-Bundle 'nvim-tree/nvim-web-devicons'
-Bundle 'romgrk/barbar.nvim'
-
-filetype plugin indent on "required for vundle

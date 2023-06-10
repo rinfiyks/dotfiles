@@ -22,17 +22,13 @@ git submodule update --init --recursive --remote
 filesdir="$(pwd)/files"
 cp -TdRbs "$filesdir" "$HOME"
 
-echo "Installing vundle for vim"
-cd "$HOME/.vim/bundle"
-if [ -d vundle ]; then
-  echo "vundle is already cloned, will pull instead"
-  cd vundle
-  git pull
-  cd ..
+if [ ! -d "$HOME/.local/share/nvim/plugged" ]; then
+  echo "Installing vim-plug for vim"
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  nvim +PlugInstall +qall
 else
-  git clone https://github.com/gmarik/vundle.git
+  nvim +PlugUpgrade +qall
 fi
-
-vim +BundleInstall +qall
 
 echo "All done"
