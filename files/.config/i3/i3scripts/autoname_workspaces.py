@@ -61,6 +61,7 @@ WINDOW_ICONS = {
     'libreoffice': fa.icons['file-alt'],
     'mysql-workbench-bin': fa.icons['database'],
     'obs': fa.icons['video'],
+    'obsidian': fa.icons['sticky-note'],
     'okular': fa.icons['file-pdf'],
     'ristretto': fa.icons['image'],
     'signal': fa.icons['comments'],
