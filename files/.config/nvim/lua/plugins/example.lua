@@ -9,6 +9,14 @@ if true then
       },
     },
 
+    {
+      "akinsho/bufferline.nvim",
+      keys = {
+        { "<A-H>", "<Cmd>BufferLineMovePrev<CR>", desc = "Move tab prev" },
+        { "<A-L>", "<Cmd>BufferLineMoveNext<CR>", desc = "Move tab next" },
+      },
+    },
+
     -- TODO check the following block
     {
       "nvim-lualine/lualine.nvim",
