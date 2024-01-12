@@ -38,6 +38,7 @@ def generate_files(config):
     for root, dirs, files in os.walk('templates/files'):
         path = root.split(os.sep)
         for file in files:
+            print(f'Generating config for {file}')
             filled = fill_in_template(os.path.join(root, file), config)
             file_path = os.path.join('files', *path[2:], file)
             try: os.makedirs(os.path.dirname(file_path))
