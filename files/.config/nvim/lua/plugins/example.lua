@@ -32,8 +32,12 @@ if true then
         table.remove(opts.sections.lualine_z, 1) -- remove datetime component
       end,
     },
-    -- disable the auto-closing braces plugin
+    -- disable some annoying plugins:
+    -- auto-closing braces plugin
     { "echasnovski/mini.pairs", enabled = false },
+    -- snippets plugin
+    { "rafamadriz/friendly-snippets", enabled = false },
+    { "L3MON4D3/LuaSnip", enabled = false },
 
     {
       "gbprod/yanky.nvim",
