@@ -17,7 +17,7 @@ return {
       config.settings = {
         showImplicitArguments = true,
         excludedPackages = { "akka.actor.typed.javadsl", "com.github.swagger.akka.javadsl" },
-        serverProperties = { "-Xmx3g" },
+        serverProperties = { "-Xmx2g" },
         serverVersion = "latest.snapshot",
       }
 
@@ -33,7 +33,7 @@ return {
           request = "launch",
           name = "RunOrTest",
           metals = {
-            runType = "run",
+            runType = "runOrTestFile",
             envFile = "${workspaceFolder}/.env",
           },
         },
@@ -70,13 +70,9 @@ return {
           max_value_lines = 100, -- Can be integer or nil.
         },
       })
-      require("dap.ext.vscode").load_launchjs(nil, {})
-
-      dap.listeners.before.event_terminated["dapui_config"] = function()
-        vim.notify("ev term")
-      end
-      dap.listeners.before.event_exited["dapui_config"] = function()
-        vim.notify("ev ex")
+      dap.listeners.after["event_terminated"]["nvim-metals"] = function()
+        -- vim.notify("Tests have finished!")
+        dap.repl.open()
       end
 
       config.on_attach = function(client, bufnr)
@@ -94,6 +90,5 @@ return {
         group = nvim_metals_group,
       })
     end,
-    require("config.dap.keymaps").setup(),
   },
 }

@@ -17,6 +17,11 @@ return {
         { "<leader>mt", in_buffer_dir("files"), desc = "Find files in buffer directory" },
         { "<leader>mb", "<cmd>Telescope buffers show_all_buffers=true<cr>", desc = "Switch Buffer" },
         { "<leader><space>r", Util.telescope("live_grep", { cwd = false }), desc = "Live grep in git root" },
+        {
+          "<leader><space>R",
+          Util.telescope("live_grep", { cwd = false, no_ignore = true, hidden = true }),
+          desc = "Live grep, no ignore",
+        },
         { "<leader><space>s", Util.telescope("live_grep"), desc = "Live grep in LSP root" },
         { "<leader><space>t", in_buffer_dir("live_grep"), desc = "Live grep in buffer directory" },
         {
@@ -28,12 +33,14 @@ return {
         { "<leader>S", Util.telescope("grep_string"), desc = "Grep cursor in LSP root" },
         { "<leader>T", in_buffer_dir("grep_string"), desc = "Grep cursor in buffer directory" },
         { "<leader>H", Util.telescope("help_tags"), desc = "Help tags" },
-        { "Q", Util.telescope("commands"), desc = "Commands" },
+        { "<leader>mq", Util.telescope("commands"), desc = "Commands" },
         { "qq", Util.telescope("command_history"), desc = "Command history" },
         { "q/", Util.telescope("search_history"), desc = "Search history" },
         { "<leader>mn", Util.telescope("man_pages"), desc = "Man pages" },
         { "<leader>qf", Util.telescope("quickfix"), desc = "Quickfix" },
         { "<leader>qh", Util.telescope("quickfixhistory"), desc = "Quickfix history" },
+        { "<leader>mp", ":Telescope yank_history<cr>", desc = "Yank history" },
+        -- { "<leader>ma", ":Telescope macros<cr>", desc = "Macros" },
         { "<leader>mm", Util.telescope("resume"), desc = "Resume" },
         { "<leader>mo", ":Telescope notify<cr>", desc = "Notifications" },
         -- lsp
@@ -51,12 +58,6 @@ return {
           -- ["<esc>"] = "close",
           ["<C-t>"] = function(...)
             return require("trouble.providers.telescope").open_with_trouble(...)
-          end,
-          ["<a-i>"] = function()
-            Util.telescope("find_files", { no_ignore = true })()
-          end,
-          ["<a-h>"] = function()
-            Util.telescope("find_files", { hidden = true })()
           end,
           ["<esc>"] = function(...)
             return require("telescope.actions").close(...)
@@ -77,8 +78,10 @@ return {
     config = function(_, opts)
       local tel = require("telescope")
       tel.setup(opts)
+      tel.load_extension("yank_history")
       tel.load_extension("fzf")
       tel.load_extension("notify")
+      -- tel.load_extension("macros")
     end,
   },
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
