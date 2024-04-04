@@ -20,7 +20,7 @@ workspace_layout tabbed
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+t exec alacritty
+bindsym $mod+t exec kitty
 
 # volume control
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
