@@ -6,8 +6,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+local background_file = "/home/tom/.config/nvim/lua/config/background.vim"
 local function check_and_update_background_periodically()
-  local background_file = "/home/tom/.config/nvim/lua/config/background.vim"
   local last_modified = vim.fn.getftime(background_file)
 
   -- Assuming you use a global variable to store the last known modification time
@@ -18,7 +18,7 @@ local function check_and_update_background_periodically()
 end
 
 -- Set a global variable with the initial modification time
-vim.g.last_background_mod = vim.fn.getftime("/home/tom/.config/nvim/lua/config/background.vim")
+vim.g.last_background_mod = vim.fn.getftime(background_file)
 
 -- Set up a timer to check the background file every minute
 vim.defer_fn(function()
@@ -58,3 +58,5 @@ require("lazy").setup({
     },
   },
 })
+
+vim.cmd("source " .. background_file)
