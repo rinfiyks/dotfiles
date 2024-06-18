@@ -31,7 +31,7 @@ fi
 
 # Recursively create symlinks
 filesdir="$(pwd)/files"
-cp -TdRbs "$filesdir" "$HOME"
+cp -TdRs "$filesdir" "$HOME"
 
 if [ ! -d "$HOME/.local/share/nvim/plugged" ]; then
   echo "Installing vim-plug for vim"
