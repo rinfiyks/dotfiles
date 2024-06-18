@@ -58,6 +58,7 @@ WINDOW_ICONS = {
     'insomnia': fa.icons['paper-plane'],
     'jetbrains-idea-ce': fa.icons['code'],
     'jetbrains-goland': fa.icons['code'],
+    'kitty': fa.icons['terminal'],
     'libreoffice': fa.icons['file-alt'],
     'mysql-workbench-bin': fa.icons['database'],
     'obs': fa.icons['video'],
