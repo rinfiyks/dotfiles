@@ -12,6 +12,7 @@ return {
             "c",
             "css",
             "cpp",
+            "groovy",
             "json",
             "lua",
             "luadoc",

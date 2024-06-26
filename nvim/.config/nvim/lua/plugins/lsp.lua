@@ -46,11 +46,13 @@ return {
         event = "BufWritePre",
         opts = {
             formatters_by_ft = {
-                lua = { "stylua" },
                 c = { "clangformat" },
+                groovy = { "npm-groovy-lint" },
+                lua = { "stylua" },
+                scala = { "scalafmt" },
             },
-            format_on_save = { timeout_ms = 500, lsp_fallback = true },
-            notify_on_error = false,
+            format_on_save = { timeout_ms = 3000, lsp_fallback = true },
+            notify_on_error = true,
         },
     },
 }
