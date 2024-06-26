@@ -7,4 +7,13 @@ vim.g.maplocalleader = " "
 
 local opt = vim.opt
 
-opt.clipboard = "unnamed" -- Don't sync with system clipboard
+opt.mouse = "" -- Enable mouse mode
+opt.relativenumber = true -- Relative line numbers
+opt.scrolloff = 9 -- Lines of context
+
+opt.undofile = true -- Enable persistent undo (see also `:h undodir`)
+opt.backup = false -- Don't store backup while overwriting the file
+opt.writebackup = false -- Don't store backup while overwriting the file
+opt.swapfile = false -- Use an SCM instead of swap files
+
+opt.virtualedit = "block" -- Allow going past the end of line in visual block mode

@@ -6,16 +6,28 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+local background_file = "/home/tom/.config/nvim/lua/config/background.vim"
+local function check_and_update_background_periodically()
+  local last_modified = vim.fn.getftime(background_file)
+
+  -- Assuming you use a global variable to store the last known modification time
+  if vim.g.last_background_mod and last_modified ~= vim.g.last_background_mod and last_modified > 0 then
+    vim.cmd("source " .. background_file)
+    vim.g.last_background_mod = last_modified
+  end
+end
+
+-- Set a global variable with the initial modification time
+vim.g.last_background_mod = vim.fn.getftime(background_file)
+
+-- Set up a timer to check the background file every minute
+vim.defer_fn(function()
+  vim.fn.timer_start(1000, check_and_update_background_periodically, { ["repeat"] = -1 })
+end, 0)
+
 require("lazy").setup({
   spec = {
-    -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.dap.core" },
-    -- import any extras modules here
-    -- { import = "lazyvim.plugins.extras.lang.typescript" },
-    -- { import = "lazyvim.plugins.extras.lang.json" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -28,13 +40,16 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "everfrost", "habamax" } },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  install = { colorscheme = { "catppuccin-mocha" } },
+  checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
+        -- "matchit",
+        -- "matchparen",
+        "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",
@@ -43,3 +58,5 @@ require("lazy").setup({
     },
   },
 })
+
+vim.cmd("source " .. background_file)
