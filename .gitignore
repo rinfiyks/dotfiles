@@ -4,3 +4,5 @@ files/.Xresources
 files/.config/alacritty/alacritty.toml
 files/.config/i3/config
 files/.config/polybar/config.ini
+
+tmux/.tmux/plugins/
