@@ -10,6 +10,31 @@ return {
         config = function()
             local lsp = require("lspconfig")
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+            local border = {
+                { "🭽", "FloatBorder" },
+                { "▔", "FloatBorder" },
+                { "🭾", "FloatBorder" },
+                { "▕", "FloatBorder" },
+                { "🭿", "FloatBorder" },
+                { "▁", "FloatBorder" },
+                { "🭼", "FloatBorder" },
+                { "▏", "FloatBorder" },
+            }
+
+            local handlers = {
+                ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
+                ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
+            }
+            require("lspconfig").myserver.setup({ handlers = handlers })
+
+            local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+            function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+                opts = opts or {}
+                opts.border = opts.border or border
+                return orig_util_open_floating_preview(contents, syntax, opts, ...)
+            end
+
             lsp.lua_ls.setup({
                 capabilities = capabilities,
                 settings = {
@@ -48,8 +73,10 @@ return {
             formatters_by_ft = {
                 c = { "clangformat" },
                 groovy = { "npm-groovy-lint" },
+                javascript = { "prettierd" },
                 lua = { "stylua" },
                 scala = { "scalafmt" },
+                typescript = { "prettierd" },
             },
             format_on_save = { timeout_ms = 3000, lsp_fallback = true },
             notify_on_error = true,

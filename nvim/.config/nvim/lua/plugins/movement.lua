@@ -11,8 +11,8 @@ return {
         keys = function()
             local harpoon = require("harpoon")
             return {
-                { "<leader>hg", function() harpoon:list():add() end },
-                { "<leader>hh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end },
+                { "<leader>xx", function() harpoon:list():add() end },
+                { "<leader>xa", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end },
                 { "<leader>1", function() harpoon:list():select(1) end },
                 { "<leader>2", function() harpoon:list():select(2) end },
                 { "<leader>3", function() harpoon:list():select(3) end },
