@@ -55,7 +55,7 @@ return {
                     vim.keymap.set("n", "<leader>li", vim.lsp.buf.implementation, { buffer = ev.buf })
                     vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, { buffer = ev.buf })
                     vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { buffer = ev.buf })
-                    vim.keymap.set("n", "<leader>C", vim.lsp.buf.code_action, { buffer = ev.buf })
+                    vim.keymap.set({ "n", "v" }, "<leader>C", vim.lsp.buf.code_action, { buffer = ev.buf })
                     vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = ev.buf })
                     vim.keymap.set("n", "<leader>K", vim.lsp.buf.signature_help, { buffer = ev.buf })
                     vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = ev.buf })

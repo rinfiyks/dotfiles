@@ -3,8 +3,13 @@ return {
         "scalameta/nvim-metals",
         ft = { "scala", "sbt", "java" },
         keys = {
-            { "<leader>me", function() require("telescope").extensions.metals.commands() end, desc = "Metals commands" },
+            {
+                "<leader>me",
+                function() require("telescope").extensions.metals.commands() end,
+                desc = "Metals commands",
+            },
             { "<leader>mc", function() require("metals").compile_cascade() end, desc = "Metals compile cascade" },
+            { mode = "v", "K", function() require("metals").type_of_range() end, desc = "Metals type of range" },
         },
         config = function()
             local metals = require("metals")
