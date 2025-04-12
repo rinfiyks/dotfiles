@@ -19,16 +19,17 @@ return {
             config.settings = {
                 showImplicitArguments = true,
                 excludedPackages = { "akka.actor.typed.javadsl" },
-                serverProperties = { "-Xmx2g" },
+                serverProperties = { "-Xmx3g" },
                 serverVersion = "latest.snapshot",
             }
 
-            config.capabilities = require("cmp_nvim_lsp").default_capabilities()
+            -- config.capabilities = require("cmp_nvim_lsp").default_capabilities()
+            config.capabilities = require("blink.cmp").get_lsp_capabilities()
 
-            --       config.on_attach = function(client, bufnr)
-            --         -- metals.setup_dap()
-            --         require("lsp-format").on_attach(client, bufnr)
-            --       end
+            -- config.on_attach = function(client, bufnr)
+            --     -- metals.setup_dap()
+            --     require("lsp-format").on_attach(client, bufnr)
+            -- end
 
             -- Autocmd that will actually be in charge of starting the whole thing
             local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
