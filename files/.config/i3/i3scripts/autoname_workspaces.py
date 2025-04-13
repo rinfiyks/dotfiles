@@ -71,6 +71,7 @@ WINDOW_ICONS = {
     'terminator': fa.icons['terminal'],
     'termite': fa.icons['terminal'],
     'tibia': fa.icons['gamepad'],
+    'tidal-hifi': fa.icons['play'],
     'thunar': fa.icons['folder-open'],
     'thunderbird': fa.icons['envelope'],
     'ts3client_linux_amd64': fa.icons['microphone'],
