@@ -8,6 +8,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 vim.opt.numberwidth = 1
+vim.opt.winborder = "single"
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true

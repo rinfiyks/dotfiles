@@ -1,0 +1,1 @@
+/home/tom/.config/tmux/dark.tmux
