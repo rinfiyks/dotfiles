@@ -12,5 +12,5 @@ end
 -- Set a global variable with the initial modification time
 vim.g.last_background_mod = vim.fn.getftime("/home/tom/.config/nvim/lua/config/background.vim")
 
--- Set up a timer to check the background file every minute
+-- Set up a timer to check the background file every second
 vim.defer_fn(function() vim.fn.timer_start(1000, check_and_update_background_periodically, { ["repeat"] = -1 }) end, 0)
