@@ -1,8 +1,15 @@
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
 @keyframes blink-warning {
     70% {
         color: white;
     }
-
     to {
         color: white;
         background-color: orange;
@@ -13,47 +20,135 @@
     70% {
       color: white;
     }
-
     to {
         color: white;
         background-color: red;
     }
 }
 
-* {
-    border: none;
-    border-radius: 0;
-    min-height: 0;
-    margin: 0;
-    padding: 0;
-}
-
 #waybar {
-    background: #323232;
+    background: #242424;
     color: white;
     font-family: "Noto Sans";
     font-size: 22px;
 }
 
-#battery,
-#clock,
-#cpu,
-#custom-keyboard-layout,
-#memory,
-#mode,
-#network,
-#pulseaudio,
-#temperature,
-#tray {
-    padding-left: 10px;
-    padding-right: 10px;
+.modules-right box.module {
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 0.14em;
+    padding-bottom: 0.45em;
 }
 
+.modules-right label.module {
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 0.14em;
+    padding: 0 0.45em;
+}
 
-#battery {
+#window {
+    font-weight: bold;
+}
+
+#workspaces button.empty {
+    padding-right: 0.2em;
+}
+
+#workspaces button {
+    border-top: 0.1em solid transparent;
+    padding-bottom: 0.1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: #888888;
+}
+
+#workspaces button.focused {
+    border-color: #4c7899;
+    color: white;
+    background-color: #285577;
+}
+
+#workspaces button.urgent {
+    border-color: #c9545d;
+    color: #c9545d;
+}
+
+#mode {
+    background: #64727D;
+    border-top: 0.1em solid white;
+    padding: 0 0.4em;
+}
+
+#network {
+    background-image: linear-gradient(to right, #7632c8, #7632c8);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 0.14em;
+}
+
+#network.disconnected {
+    color: orange;
+}
+
+#pulseaudio {
+    background-image: linear-gradient(to right, #327bc8, #327bc8);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 0.14em;
+}
+
+#pulseaudio.muted {
+}
+
+#cpu {
+    background-image: linear-gradient(to right, #c83232, #c83232);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 0.14em;
+}
+
+#cpu.warning {
+    color: orange;
+}
+
+#cpu.critical {
+    color: red;
+}
+
+#memory {
+    background-image: linear-gradient(to right, #c87132, #c87132);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 0.14em;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#memory.warning {
+    color: orange;
+}
+
+#memory.critical {
+    color: red;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#temperature {
+    background-image: linear-gradient(to right, #c8a232, #c8a232);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 0.14em;
+}
+
+#temperature.critical {
+    color: red;
+}
+
+#battery {
+    background-image: linear-gradient(to right, #68c832, #68c832);
 }
 
 #battery.warning {
@@ -74,90 +169,11 @@
     animation-duration: 2s;
 }
 
-#clock {
-}
-#clock.time {
-}
-
-#cpu {
-}
-
-#cpu.warning {
-    color: orange;
-}
-
-#cpu.critical {
-    color: red;
-}
-
-#memory {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#memory.warning {
-    color: orange;
-}
-
-#memory.critical {
-    color: red;
-    animation-name: blink-critical;
-    animation-duration: 2s;
-}
-
-#mode {
-    background: #64727D;
-    border-top: 2px solid white;
-    padding-bottom: 2px;
-}
-
-#network {
-}
-
-#network.disconnected {
-    color: orange;
-}
-
-#pulseaudio {
-}
-
-#pulseaudio.muted {
-}
-
-#temperature {
-}
-
-#temperature.critical {
-    color: red;
-}
-
 #tray {
+    background-image: linear-gradient(to right, #a332c8, #a332c8);
+    padding: 0.2em 0.4em;
 }
 
-#window {
-    font-weight: bold;
-}
-
-#workspaces button.empty {
-    padding-right: 0.2em;
-}
-
-#workspaces button {
-    border-top: 2px solid transparent;
-    padding-bottom: 2px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    color: #888888;
-}
-
-#workspaces button.focused {
-    border-color: #4c7899;
-    color: white;
-    background-color: #285577;
-}
-
-#workspaces button.urgent {
-    border-color: #c9545d;
-    color: #c9545d;
+#clock {
+    background-image: linear-gradient(to right, #32bac8, #32bac8);
 }
