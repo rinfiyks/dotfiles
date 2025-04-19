@@ -139,11 +139,15 @@
     font-weight: bold;
 }
 
+#workspaces button.empty {
+    padding-right: 0.2em;
+}
+
 #workspaces button {
     border-top: 2px solid transparent;
     padding-bottom: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     color: #888888;
 }
 

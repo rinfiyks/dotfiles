@@ -83,7 +83,22 @@
     "sway/workspaces": {
         "all-outputs": false,
         "disable-scroll": true,
-        "format": "{index} {name}"
+        "format": "<span>{index} </span><span font='Font Awesome 6 Free'>{windows}</span>",
+        "window-format": "{name}",
+        "format-window-separator": " ",
+        "window-rewrite-default": "",
+        "window-rewrite": {
+            "class<discord>": "",
+            "class<firefox>": "",
+            "class<Chromium>": "",
+            "class<kitty>": "",
+            "class<jetbrains-idea-ce>": "",
+            "class<org.gnome.Nautilus>": "",
+            "class<qalculate-gtk>": "",
+            "class<obsidian>": "",
+            "class<com.tibia.client>": "",
+            "class<org.kde.kolourpaint>": "",
+      }
     },
 
     "pulseaudio": {
