@@ -23,13 +23,20 @@ return {
                 serverVersion = "latest.snapshot",
             }
 
-            -- config.capabilities = require("cmp_nvim_lsp").default_capabilities()
             config.capabilities = require("blink.cmp").get_lsp_capabilities()
 
-            -- config.on_attach = function(client, bufnr)
-            --     -- metals.setup_dap()
-            --     require("lsp-format").on_attach(client, bufnr)
-            -- end
+            config.on_attach = function(client, bufnr)
+                vim.keymap.set("n", "<Esc>", function()
+                    for _, win in ipairs(vim.api.nvim_list_wins()) do
+                        local cfg = vim.api.nvim_win_get_config(win)
+                        if cfg.relative and cfg.relative ~= "" then vim.api.nvim_win_close(win, true) end
+                    end
+                end, {
+                    buffer = bufnr,
+                    silent = true,
+                    desc = "Close any floating LSP window",
+                })
+            end
 
             -- Autocmd that will actually be in charge of starting the whole thing
             local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
