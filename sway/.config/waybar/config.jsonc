@@ -97,6 +97,7 @@
             "class<qalculate-gtk>": "",
             "class<obsidian>": "",
             "class<com.tibia.client>": "",
+            "class<Tibia>": "",
             "class<org.kde.kolourpaint>": "",
       }
     },
