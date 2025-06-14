@@ -4,6 +4,7 @@
     /*
       Remember to create the symlink:
       ln -s ~/.config/waybar/config.d/$HOSTNAME.jsonc ~/.config/waybar/config.d/host.jsonc
+      ln -s ~/.config/waybar/config.d/$HOSTNAME.css ~/.config/waybar/config.d/host.css
     */
     "~/.config/waybar/config.d/host.jsonc"
   ]

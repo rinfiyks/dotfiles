@@ -1,3 +1,10 @@
+/*
+  Remember to create the symlinks:
+  ln -s ~/.config/waybar/config.d/$HOSTNAME.jsonc ~/.config/waybar/config.d/host.jsonc
+  ln -s ~/.config/waybar/config.d/$HOSTNAME.css ~/.config/waybar/config.d/host.css
+*/
+@import url("config.d/host.css");
+
 * {
     border: none;
     border-radius: 0;
@@ -30,7 +37,6 @@
     background: #242424;
     color: white;
     font-family: "Noto Sans";
-    font-size: 22px;
 }
 
 .modules-right box.module {

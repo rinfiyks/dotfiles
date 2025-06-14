@@ -1,4 +1,5 @@
 {
+    "output": "DP-3",
     "modules-right": [
         "pulseaudio",
         "cpu",

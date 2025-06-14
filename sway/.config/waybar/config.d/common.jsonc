@@ -69,7 +69,7 @@
     },
 
     "sway/workspaces": {
-        "all-outputs": false,
+        "all-outputs": true,
         "disable-scroll": true,
         "format": "<span>{index} </span><span font='Font Awesome 6 Free'>{windows}</span>",
         "window-format": "{name}",
