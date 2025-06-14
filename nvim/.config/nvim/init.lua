@@ -14,6 +14,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
+vim.cmd([[
+  filetype plugin indent on
+  syntax on
+]])
 
 require("lazy").setup("plugins", {
     change_detection = { notify = false },
