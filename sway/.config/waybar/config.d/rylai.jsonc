@@ -1,0 +1,12 @@
+{
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "temperature",
+        "battery",
+        "tray",
+        "clock#time"
+    ]
+}

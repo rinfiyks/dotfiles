@@ -1,0 +1,10 @@
+{
+    "modules-right": [
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "temperature",
+        "tray",
+        "clock#time"
+    ]
+}
