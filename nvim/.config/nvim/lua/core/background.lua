@@ -1,6 +1,6 @@
 local M = {}
 
-M.background_file = vim.fn.expand("~/.config/nvim/lua/config/background.vim")
+M.background_file = vim.fn.expand("~/.config/nvim/lua/config/current-background.vim")
 local fs_event = vim.loop.new_fs_event()
 
 if fs_event then
