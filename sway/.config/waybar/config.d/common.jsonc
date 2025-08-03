@@ -71,7 +71,7 @@
     "sway/workspaces": {
         "all-outputs": true,
         "disable-scroll": true,
-        "format": "<span>{index} </span><span font='Font Awesome 6 Free'>{windows}</span>",
+        "format": "<span>{index} </span><span font='Font Awesome 7 Free'>{windows}</span>",
         "window-format": "{name}",
         "format-window-separator": " ",
         "window-rewrite-default": "",
@@ -92,9 +92,9 @@
 
     "pulseaudio": {
        "scroll-step": 5,
-       "format": "<span font_family='Font Awesome 6 Free'>{icon}</span> {volume}%",
-       "format-bluetooth": "<span font_family='Font Awesome 6 Free'>{icon}</span> {volume}%",
-       "format-muted": "<span font_family='Font Awesome 6 Free'></span> {volume}%",
+       "format": "<span font_family='Font Awesome 7 Free'>{icon}</span> {volume}%",
+       "format-bluetooth": "<span font_family='Font Awesome 7 Free'>{icon}</span> {volume}%",
+       "format-muted": "<span font_family='Font Awesome 7 Free'></span> {volume}%",
        "format-icons": {
            "headphones": "",
            "handsfree": "",
