@@ -29,10 +29,11 @@ if [ -n "$cmd" ]; then
 fi
 
 # update the cache with incremented count
+tmp="$(mktemp "${CACHE_FILE}.tmp.XXXXXX")"
 {
   for c in "${!counts[@]}"; do
     printf "%d %s\n" "${counts[$c]}" "$c"
   done
 } | sort -k1,1nr -k2,2 \
-  > "$CACHE_FILE"
-
+  > "$tmp"
+mv -f "$tmp" "$CACHE_FILE"
