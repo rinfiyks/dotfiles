@@ -78,9 +78,18 @@ return {
                 lua = { "stylua" },
                 scala = { "scalafmt" },
                 typescript = { "prettierd" },
+                svelte = { "prettierd" },
             },
-            format_on_save = { timeout_ms = 3000, lsp_fallback = true },
+            format_on_save = { timeout_ms = 3000, lsp_fallback = false },
             notify_on_error = true,
+            formatters = {
+                prettierd = {
+                    condition = function()
+                        local rp = vim.loop.fs_realpath
+                        return rp(".prettierrc") or rp(".prettierrc.json")
+                    end,
+                },
+            },
         },
     },
 }
