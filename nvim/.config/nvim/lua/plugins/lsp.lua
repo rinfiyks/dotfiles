@@ -75,6 +75,7 @@ return {
                 c = { "clangformat" },
                 groovy = { "npm-groovy-lint" },
                 javascript = { "prettierd" },
+                json = { "jq" },
                 lua = { "stylua" },
                 scala = { "scalafmt" },
                 typescript = { "prettierd" },
