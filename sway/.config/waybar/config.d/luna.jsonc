@@ -2,7 +2,8 @@
     "output": "DP-3",
     "modules-right": [
         "custom/mute-status",
-        "pulseaudio",
+        "custom/tidal-volume",
+        "wireplumber",
         "cpu",
         "memory",
         "temperature",

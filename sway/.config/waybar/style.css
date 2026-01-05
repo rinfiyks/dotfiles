@@ -97,14 +97,18 @@
     color: orange;
 }
 
-#pulseaudio {
+#wireplumber {
     background-image: linear-gradient(to right, #327bc8, #327bc8);
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 100% 0.14em;
 }
 
-#pulseaudio.muted {
+#custom-tidal-volume {
+    background-image: linear-gradient(to right, #327bc8, #327bc8);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 0.14em;
 }
 
 #cpu {
