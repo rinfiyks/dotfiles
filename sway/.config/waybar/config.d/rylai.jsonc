@@ -1,7 +1,8 @@
 {
     "modules-right": [
+        "custom/tidal-volume",
         "network",
-        "pulseaudio",
+        "wireplumber",
         "cpu",
         "memory",
         "temperature",
