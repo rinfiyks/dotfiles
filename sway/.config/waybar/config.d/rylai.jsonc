@@ -1,7 +1,7 @@
 {
     "modules-right": [
-        "custom/tidal-volume",
         "network",
+        "custom/tidal-volume",
         "wireplumber",
         "cpu",
         "memory",
