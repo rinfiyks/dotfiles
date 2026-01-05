@@ -73,6 +73,7 @@ return {
         opts = {
             formatters_by_ft = {
                 c = { "clangformat" },
+                css = { "prettierd" },
                 groovy = { "npm-groovy-lint" },
                 javascript = { "prettierd" },
                 json = { "jq" },
