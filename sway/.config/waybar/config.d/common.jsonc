@@ -90,21 +90,13 @@
       }
     },
 
-    "pulseaudio": {
-       "scroll-step": 5,
-       "format": "<span font_family='Font Awesome 7 Free'>{icon}</span> {volume}%",
-       "format-bluetooth": "<span font_family='Font Awesome 7 Free'>{icon}</span> {volume}%",
-       "format-muted": "<span font_family='Font Awesome 7 Free'></span> {volume}%",
-       "format-icons": {
-           "headphones": "",
-           "handsfree": "",
-           "headset": "",
-           "phone": "",
-           "portable": "",
-           "car": "",
-           "default": ["", ""]
-       },
-       "on-click": "pavucontrol"
+    "wireplumber": {
+      "format": "<span font_family='Font Awesome 7 Free'>{icon}</span> {volume}%",
+      "format-muted": "<span font_family='Font Awesome 7 Free'></span> {volume}%",
+      "format-icons": ["", ""],
+      "on-click": "pavucontrol",
+      "max-volume": 150,
+      "scroll-step": 5
     },
 
     "temperature": {
@@ -119,6 +111,14 @@
           "" 
       ],
       "tooltip": true
+    },
+
+    "custom/tidal-volume": {
+        "format": "<span font_family='Font Awesome 7 Free'></span> {text}",
+        "exec":  "bash ~/.config/waybar/scripts/tidal-volume.sh",
+        "interval": 1,
+        "on-scroll-up": "bash ~/.config/waybar/scripts/tidal-volume-up.sh",
+        "on-scroll-down": "bash ~/.config/waybar/scripts/tidal-volume-down.sh",
     },
 
     "tray": {
