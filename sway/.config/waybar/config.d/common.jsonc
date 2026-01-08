@@ -81,12 +81,14 @@
             "class<Chromium>": "",
             "class<kitty>": "",
             "class<jetbrains-idea-ce>": "",
+            "class<jetbrains-idea>": "",
             "class<org.gnome.Nautilus>": "",
             "class<qalculate-gtk>": "",
             "class<obsidian>": "",
             "class<com.tibia.client>": "",
             "class<Tibia>": "",
             "class<org.kde.kolourpaint>": "",
+            "class<tidal-hifi>": ""
       }
     },
 
@@ -118,9 +120,13 @@
         "exec":  "bash ~/.config/waybar/scripts/tidal-volume.sh",
         "interval": 1,
         "on-scroll-up": "bash ~/.config/waybar/scripts/tidal-volume-up.sh",
-        "on-scroll-down": "bash ~/.config/waybar/scripts/tidal-volume-down.sh",
+        "on-scroll-down": "bash ~/.config/waybar/scripts/tidal-volume-down.sh"
     },
-
+    "custom/now-playing": {
+        "exec": "~/.config/waybar/scripts/now-playing.sh",
+        "interval": 1,
+        "escape": true
+    },
     "tray": {
         "icon-size": 21,
         "spacing": 10

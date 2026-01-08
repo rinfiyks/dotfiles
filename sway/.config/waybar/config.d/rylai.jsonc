@@ -1,6 +1,7 @@
 {
     "modules-right": [
         "network",
+        "custom/now-playing",
         "custom/tidal-volume",
         "wireplumber",
         "cpu",
