@@ -87,7 +87,7 @@ return {
             formatters = {
                 prettierd = {
                     condition = function()
-                        local rp = vim.loop.fs_realpath
+                        local rp = vim.uv.fs_realpath
                         return rp(".prettierrc") or rp(".prettierrc.json")
                     end,
                 },
