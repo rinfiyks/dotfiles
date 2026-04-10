@@ -1,10 +1,10 @@
 local M = {}
 
 M.background_file = vim.fn.expand("~/.config/nvim/lua/config/current-background.vim")
-local fs_event = vim.loop.new_fs_event()
+local fs_event = vim.uv.new_fs_event()
 
 if fs_event then
-    fs_event:start(M.background_file, {}, function(err, filename, events)
+    fs_event:start(M.background_file, {}, function(err)
         if err then
             vim.notify("fs_event error: " .. err)
             return
