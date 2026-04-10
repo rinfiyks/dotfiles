@@ -10,8 +10,12 @@ for player in $(playerctl -l); do
         else echo -e "\uf04b" # font-awesome play icon
       fi)
       song_details=$(playerctl -p "$player" metadata --format '{{artist}} - {{title}}')
+      echo "${song_details}" > /tmp/now-playing.txt
+
+      if [[ ${#song_details} -gt 60 ]]; then
+        song_details="${song_details:0:57}..."
+      fi
       echo -e "$icon  $song_details"
-      echo "$song_details" > /tmp/now-playing.txt
       exit
     fi
   fi
