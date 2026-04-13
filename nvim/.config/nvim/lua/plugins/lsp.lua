@@ -50,6 +50,7 @@ return {
             formatters_by_ft = {
                 c = { "clangformat" },
                 css = { "prettierd" },
+                go = { "gofmt" },
                 groovy = { "npm-groovy-lint" },
                 javascript = { "prettierd" },
                 json = { "jq" },
