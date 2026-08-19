@@ -2,7 +2,13 @@ return {
     {
         "altermo/ultimate-autopair.nvim",
         event = { "InsertEnter", "CmdlineEnter" },
-        opts = {},
+        opts = {
+            fastwarp = {
+                multi = true,
+                { map = "<M-e>", nocursormove = false },
+                { map = "<M-f>", nocursormove = false, faster = true },
+            },
+        },
     },
     {
         "kylechui/nvim-surround",

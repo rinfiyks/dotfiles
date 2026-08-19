@@ -83,9 +83,4 @@ return {
         },
         opts_extend = { "sources.default" },
     },
-    {
-        "altermo/ultimate-autopair.nvim",
-        event = { "InsertEnter", "CmdlineEnter" },
-        opts = {},
-    },
 }
