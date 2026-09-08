@@ -55,6 +55,7 @@ return {
                 javascript = { "prettierd" },
                 json = { "jq" },
                 lua = { "stylua" },
+                rust = { "rustfmt" },
                 scala = { "scalafmt" },
                 typescript = { "prettierd" },
                 svelte = { "prettierd" },
